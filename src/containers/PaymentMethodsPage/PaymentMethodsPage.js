@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { bool } from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import { ensureCurrentUser } from '../../util/data';
 import { propTypes } from '../../util/types';
+import {
+  createStripeCustomer,
+  addPaymentMethod,
+  deletePaymentMethod,
+  updatePaymentMethod,
+} from '../../ducks/paymentMethods.duck';
+import { handleCardSetup } from '../../ducks/stripe.duck';
 import { isScrollingDisabled } from '../../ducks/UI.duck';
 import {
   IconClose,
@@ -19,116 +26,195 @@ import {
 } from '../../components';
 import { TopbarContainer } from '..';
 import { PaymentMethodsForm } from '../../forms';
+import { createStripeSetupIntent, loadData } from './PaymentMethodsPage.duck.js';
 
 import css from './PaymentMethodsPage.css';
 
-export const PaymentMethodsPageComponent = props => {
-  const { currentUser, scrollingDisabled, intl } = props;
+export class PaymentMethodsPageComponent extends Component {
+  constructor(props) {
+    super(props);
 
-  const tabs = [
-    {
-      text: <FormattedMessage id="PaymentMethodsPage.contactDetailsTabTitle" />,
-      selected: false,
-      linkProps: {
-        name: 'ContactDetailsPage',
-      },
-    },
-    {
-      text: <FormattedMessage id="PaymentMethodsPage.passwordTabTitle" />,
-      selected: false,
-      linkProps: {
-        name: 'PasswordChangePage',
-      },
-    },
-    {
-      text: <FormattedMessage id="PaymentMethodsPage.paymentsTabTitle" />,
-      selected: false,
-      linkProps: {
-        name: 'PayoutPreferencesPage',
-      },
-    },
-    {
-      text: <FormattedMessage id="PaymentMethodsPage.paymentMethodsTabTitle" />,
-      selected: true,
-      linkProps: {
-        name: 'PaymentMethodsPage',
-      },
-    },
-  ];
+    this.state = {
+      creditCardSaved: false,
+    };
 
-  const title = intl.formatMessage({ id: 'PaymentMethodsPage.title' });
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleRemovePaymentMethod = this.handleRemovePaymentMethod.bind(this);
+  }
 
-  const ensuredCurrentUser = ensureCurrentUser(currentUser);
-  const currentUserLoaded = !!ensuredCurrentUser.id;
+  handleSubmit = params => {
+    const {
+      onCreateSetupIntent,
+      onHandleCardSetup,
+      onCreateStripeCustomer,
+      onAddPaymentMethod,
+      onUpdatePaymentMethod,
+      currentUser,
+    } = this.props;
 
-  // Get first and last name of the current user and use it in the StripePaymentForm to autofill the name field
-  const userName = currentUserLoaded
-    ? `${ensuredCurrentUser.attributes.profile.firstName} ${
-        ensuredCurrentUser.attributes.profile.lastName
-      }`
-    : null;
+    const ensuredCurrentUser = ensureCurrentUser(currentUser);
+    const stripeCustomer = ensuredCurrentUser.stripeCustomer;
+    const hasSavedPaymentMethod = stripeCustomer.defaultPaymentMethod;
 
-  const initalValuesForStripePayment = { name: userName };
+    const { stripe, card, formValues } = params;
 
-  const handleSubmit = params => {
-    //TODO
+    onCreateSetupIntent().then(setupIntent => {
+      const setupIntentClientSecret =
+        setupIntent && setupIntent.attributes ? setupIntent.attributes.clientSecret : null;
+
+      const paymentParams = {
+        payment_method_data: {
+          billing_details: { name: formValues.name },
+        },
+      };
+
+      const stripeParams = { stripe, card, setupIntentClientSecret, paymentParams };
+
+      onHandleCardSetup(stripeParams)
+        .then(result => {
+          if (result.error) {
+            console.log('handleCardSetup failed', result.error);
+          } else {
+            console.log('Success', result);
+            console.log('currentUser', currentUser);
+            if (!stripeCustomer) {
+              console.log('Create Stripe customer');
+              return onCreateStripeCustomer(result);
+            } else if (!hasSavedPaymentMethod) {
+              console.log('Add payment method');
+              return onAddPaymentMethod(result);
+            } else {
+              console.log('Update payment method');
+              return onUpdatePaymentMethod(result);
+            }
+          }
+        })
+        .then(result => {
+          this.setState({
+            creditCardSaved: true,
+          });
+          console.log('Result', result);
+        });
+    });
   };
 
-  const savedPaymentMethod = false; //TODO
-  const handleRemovePaymentMethod = () => null; //TODO
+  handleRemovePaymentMethod = () => {
+    const { onDeletePaymentMethod } = this.props;
+    onDeletePaymentMethod().then(() => {
+      this.setState({
+        creditCardSaved: false,
+      });
+    });
+  };
 
-  const paymentMethodPlaceholder = intl.formatMessage(
-    { id: 'PaymentMethodsPage.savedPaymentMethodPlaceholder' },
-    { lastFour: '1234' }
-  );
+  render() {
+    const { currentUser, scrollingDisabled, intl } = this.props;
 
-  return (
-    <Page title={title} scrollingDisabled={scrollingDisabled}>
-      <LayoutSideNavigation>
-        <LayoutWrapperTopbar>
-          <TopbarContainer
-            currentPage="PaymentMethodsPage"
-            desktopClassName={css.desktopTopbar}
-            mobileClassName={css.mobileTopbar}
-          />
-          <UserNav selectedPageName="PaymentMethodsPage" />
-        </LayoutWrapperTopbar>
-        <LayoutWrapperSideNav tabs={tabs} />
-        <LayoutWrapperMain>
-          <div className={css.content}>
-            <h1 className={css.title}>
-              <FormattedMessage id="PaymentMethodsPage.heading" />
-            </h1>
-            {!savedPaymentMethod ? (
-              <PaymentMethodsForm
-                className={css.paymentForm}
-                formId="PaymentMethodsForm"
-                initialValues={initalValuesForStripePayment}
-                onSubmit={handleSubmit} //TODO
-              />
-            ) : (
-              <div onClick={handleRemovePaymentMethod} style={{ cursor: 'pointer' }}>
-                <div className={css.savedPaymentMethod}>
-                  <span className={css.savedPaymentMethodTitle}>
-                    <FormattedMessage id="PaymentMethodsPage.savedPaymentMethodTitle" />
-                  </span>
-                  <p>{paymentMethodPlaceholder}</p>
+    const tabs = [
+      {
+        text: <FormattedMessage id="PaymentMethodsPage.contactDetailsTabTitle" />,
+        selected: false,
+        linkProps: {
+          name: 'ContactDetailsPage',
+        },
+      },
+      {
+        text: <FormattedMessage id="PaymentMethodsPage.passwordTabTitle" />,
+        selected: false,
+        linkProps: {
+          name: 'PasswordChangePage',
+        },
+      },
+      {
+        text: <FormattedMessage id="PaymentMethodsPage.paymentsTabTitle" />,
+        selected: false,
+        linkProps: {
+          name: 'PayoutPreferencesPage',
+        },
+      },
+      {
+        text: <FormattedMessage id="PaymentMethodsPage.paymentMethodsTabTitle" />,
+        selected: true,
+        linkProps: {
+          name: 'PaymentMethodsPage',
+        },
+      },
+    ];
+
+    const title = intl.formatMessage({ id: 'PaymentMethodsPage.title' });
+
+    const ensuredCurrentUser = ensureCurrentUser(currentUser);
+    const currentUserLoaded = !!ensuredCurrentUser.id;
+    const stripeCustomer = ensuredCurrentUser.stripeCustomer;
+
+    // Get first and last name of the current user and use it in the StripePaymentForm to autofill the name field
+    const userName = currentUserLoaded
+      ? `${ensuredCurrentUser.attributes.profile.firstName} ${
+          ensuredCurrentUser.attributes.profile.lastName
+        }`
+      : null;
+
+    const initalValuesForStripePayment = { name: userName, country: 'FI' };
+
+    let hasSavedPaymentMethod = this.state.creditCardSaved;
+
+    if (stripeCustomer && stripeCustomer.deletePaymentMethod) {
+      hasSavedPaymentMethod = true;
+    }
+
+    const paymentMethodPlaceholder = intl.formatMessage(
+      { id: 'PaymentMethodsPage.savedPaymentMethodPlaceholder' },
+      { lastFour: '1234' }
+    );
+
+    return (
+      <Page title={title} scrollingDisabled={scrollingDisabled}>
+        <LayoutSideNavigation>
+          <LayoutWrapperTopbar>
+            <TopbarContainer
+              currentPage="PaymentMethodsPage"
+              desktopClassName={css.desktopTopbar}
+              mobileClassName={css.mobileTopbar}
+            />
+            <UserNav selectedPageName="PaymentMethodsPage" />
+          </LayoutWrapperTopbar>
+          <LayoutWrapperSideNav tabs={tabs} />
+          <LayoutWrapperMain>
+            <div className={css.content}>
+              <h1 className={css.title}>
+                <FormattedMessage id="PaymentMethodsPage.heading" />
+              </h1>
+              {!hasSavedPaymentMethod ? (
+                <PaymentMethodsForm
+                  className={css.paymentForm}
+                  formId="PaymentMethodsForm"
+                  initialValues={initalValuesForStripePayment}
+                  onSubmit={this.handleSubmit} //TODO
+                />
+              ) : (
+                <div onClick={this.handleRemovePaymentMethod} style={{ cursor: 'pointer' }}>
+                  <div className={css.savedPaymentMethod}>
+                    <span className={css.savedPaymentMethodTitle}>
+                      <FormattedMessage id="PaymentMethodsPage.savedPaymentMethodTitle" />
+                    </span>
+                    <p>{paymentMethodPlaceholder}</p>
+                  </div>
+                  <div className={css.savedPaymentMethodDelete}>
+                    <IconClose rootClassName={css.closeIcon} size="small" />
+                    <FormattedMessage id="PaymentMethodsPage.deletePaymentMethod" />
+                  </div>
                 </div>
-                <div className={css.savedPaymentMethodDelete}>
-                  <IconClose rootClassName={css.closeIcon} size="small" />
-                  <FormattedMessage id="PaymentMethodsPage.deletePaymentMethod" />
-                </div>
-              </div>
-            )}
-          </div>
-        </LayoutWrapperMain>
-        <LayoutWrapperFooter>
-          <Footer />
-        </LayoutWrapperFooter>
-      </LayoutSideNavigation>
-    </Page>
-  );
-};
+              )}
+            </div>
+          </LayoutWrapperMain>
+          <LayoutWrapperFooter>
+            <Footer />
+          </LayoutWrapperFooter>
+        </LayoutSideNavigation>
+      </Page>
+    );
+  }
+}
 
 PaymentMethodsPageComponent.defaultProps = {
   currentUser: null,
@@ -151,7 +237,14 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+  onHandleCardSetup: params => dispatch(handleCardSetup(params)),
+  onCreateSetupIntent: params => dispatch(createStripeSetupIntent(params)),
+  onCreateStripeCustomer: params => dispatch(createStripeCustomer(params)),
+  onAddPaymentMethod: params => dispatch(addPaymentMethod(params)),
+  onDeletePaymentMethod: params => dispatch(deletePaymentMethod(params)),
+  onUpdatePaymentMethod: params => dispatch(updatePaymentMethod(params)),
+});
 
 const PaymentMethodsPage = compose(
   connect(
@@ -160,5 +253,7 @@ const PaymentMethodsPage = compose(
   ),
   injectIntl
 )(PaymentMethodsPageComponent);
+
+PaymentMethodsPage.loadData = loadData;
 
 export default PaymentMethodsPage;
