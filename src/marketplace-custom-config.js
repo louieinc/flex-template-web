@@ -55,6 +55,7 @@ export const priceFilterConfig = {
 // Activate booking dates filter on search page
 export const dateRangeFilterConfig = {
   active: true,
+
 };
 
 // Activate keyword filter on search page
@@ -63,4 +64,6 @@ export const dateRangeFilterConfig = {
 // You can turn off ordering by distance in config.js file
 export const keywordFilterConfig = {
   active: true,
+
+
 };
