@@ -23,6 +23,5 @@ export { default as StyleguidePage } from './StyleguidePage/StyleguidePage';
 export { default as TermsOfServicePage } from './TermsOfServicePage/TermsOfServicePage';
 export { default as TopbarContainer } from './TopbarContainer/TopbarContainer';
 export { default as TransactionPage } from './TransactionPage/TransactionPage';
-export { default as HostIntro } from './HostIntro/HostIntro';
-export { default as RentIntro } from './RentIntro/RentIntro';
-export { default as ContactUs } from './ContactUs/ContactUs';
+export { default as ForOwners } from './ForOwners/ForOwners';
+export { default as ForCrashers } from './ForCrashers/ForCrashers';
