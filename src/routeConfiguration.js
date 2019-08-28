@@ -23,9 +23,8 @@ import {
   StyleguidePage,
   TermsOfServicePage,
   TransactionPage,
-  HostIntro,
-  RentIntro,
-  ContactUs
+  ForOwners,
+  ForCrashers
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -324,19 +323,14 @@ const routeConfiguration = () => {
       loadData: EmailVerificationPage.loadData,
     },
     {
-      path: '/hostintro',
-      name: 'HostIntro',
-      component: HostIntro,
+      path: '/forowners',
+      name: 'ForOwners',
+      component: ForOwners,
     },
     {
-      path: '/rentintro',
-      name: 'RentIntro',
-      component: RentIntro,
-    },
-    {
-      path: '/contactus',
-      name: 'ContactUs',
-      component: ContactUs,
+      path: '/forcrashers',
+      name: 'ForCrashers',
+      component: ForCrashers,
     },
   ];
 };
