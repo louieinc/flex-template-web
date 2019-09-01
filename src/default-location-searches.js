@@ -7,40 +7,40 @@ const { LatLng, LatLngBounds } = sdkTypes;
 //
 // Each item in the array should be an object with a unique `id` (String) and a
 // `predictionPlace` (util.types.place) properties.
-export default [
+export default [/*
   {
-    id: 'default-helsinki',
+    id: 'default-lax',
     predictionPlace: {
-      address: 'Helsinki, Finland',
-      bounds: new LatLngBounds(new LatLng(60.29783, 25.25448), new LatLng(59.92248, 24.78287)),
+      address: 'Los Angeles International Airport (LAX)',
+      bounds: new LatLngBounds(new LatLng(34.03274352770715, -118.29854531857292), new LatLng(33.85308047229285, -118.51511268142708)),
     },
   },
   {
-    id: 'default-turku',
+    id: 'default-jfk',
     predictionPlace: {
-      address: 'Turku, Finland',
-      bounds: new LatLngBounds(new LatLng(60.53045, 22.38197), new LatLng(60.33361, 22.06644)),
+      address: 'John F. Kennedy International Airport (JFK)',
+      bounds: new LatLngBounds(new LatLng(40.77015521, -73.70576419), new LatLng(40.5297492, -73.85423581)),
     },
   },
   {
-    id: 'default-tampere',
+    id: 'default-sfo',
     predictionPlace: {
-      address: 'Tampere, Finland',
-      bounds: new LatLngBounds(new LatLng(61.83657, 24.11838), new LatLng(61.42728, 23.5422)),
+      address: 'San Francisco International Airport (SFO)',
+      bounds: new LatLngBounds(new LatLng(37.70763252770715, -122.26763767920961), new LatLng(37.52796947229285, -122.49445632079038)),
     },
   },
   {
-    id: 'default-oulu',
+    id: 'default-ord',
     predictionPlace: {
-      address: 'Oulu, Finland',
-      bounds: new LatLngBounds(new LatLng(65.56434, 26.77069), new LatLng(64.8443, 24.11494)),
+      address: 'O\'Hare International Airport (ORD)',
+      bounds: new LatLngBounds(new LatLng(42.069831527707144, -87.78915772956607), new LatLng(41.89016847229285, -88.03084227043392)),
     },
   },
   {
-    id: 'default-ruka',
+    id: 'default-dca',
     predictionPlace: {
-      address: 'Ruka, Finland',
-      bounds: new LatLngBounds(new LatLng(66.16997, 29.16773), new LatLng(66.16095, 29.13572)),
+      address: 'Ronald Reagan Washington National Airport (DCA)',
+      bounds: new LatLngBounds(new LatLng(38.94353315270715, -76.92812118661385), new LatLng(38.76387009729285, -77.15882806338615)),
     },
   },
-];
+*/];

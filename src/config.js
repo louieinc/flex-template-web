@@ -113,7 +113,7 @@ const maps = {
     // When enabled, the first suggestion is "Current location" that
     // uses the browser Geolocation API to query the user's current
     // location.
-    suggestCurrentLocation: process.env.REACT_APP_DEFAULT_SEARCHES_ENABLED === 'true',
+    suggestCurrentLocation: process.env.REACT_APP_DEFAULT_SEARCHES_ENABLED === 'false',
 
     // Distance in meters for calculating the bounding box around the
     // current location.

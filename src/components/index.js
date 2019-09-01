@@ -100,6 +100,7 @@ export { default as FieldPhoneNumberInput } from './FieldPhoneNumberInput/FieldP
 // Fields and inputs using old naming pattern
 export { default as LocationAutocompleteInput, LocationAutocompleteInputField } from './LocationAutocompleteInput/LocationAutocompleteInput';
 export { default as StripeBankAccountTokenInputField } from './StripeBankAccountTokenInputField/StripeBankAccountTokenInputField';
+export { default as LocationAutocompleteInputAirport, LocationAutocompleteInputFieldAirport } from './LocationAutocompleteInputAirport/LocationAutocompleteInputAirport';
 
 // Tab navigation
 export { default as TabNav } from './TabNav/TabNav';
@@ -168,3 +169,4 @@ export { default as Topbar } from './Topbar/Topbar';
 export { default as TopbarDesktop } from './TopbarDesktop/TopbarDesktop';
 export { default as TopbarMobileMenu } from './TopbarMobileMenu/TopbarMobileMenu';
 export { default as TransactionPanel } from './TransactionPanel/TransactionPanel';
+export { default as AirportSearch } from './AirportSearch/AirportSearch';

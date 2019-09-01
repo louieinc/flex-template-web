@@ -247,7 +247,7 @@ class TopbarComponent extends Component {
               form="TopbarSearchForm"
               onSubmit={this.handleSubmit}
               initialValues={initialSearchFormValues}
-              isMobile
+              false
             />
             <p className={css.mobileHelp}>
               <FormattedMessage id="Topbar.mobileSearchHelp" />
