@@ -12,12 +12,9 @@ import {
 } from '../../components';
 
 import css from './AboutPage.css';
-import image from './about-us-1056.jpg';
+import image from './About-Us-083119.jpg';
 
-const AboutPage = () => {
-  const { siteTwitterHandle, siteFacebookPage } = config;
-  const siteTwitterPage = twitterPageURL(siteTwitterHandle);
-
+const AboutPage = () => { 
   // prettier-ignore
   return (
     <StaticPage
@@ -40,29 +37,23 @@ const AboutPage = () => {
 
           <div className={css.contentWrapper}>
             <div className={css.contentSide}>
-              <p>Crash Pads are the go-to solution when you need a cost-effective place to stay when you are reassigned to a new base.</p>
+              <p>"We wanted to create a modern platform to make it easy for the airline crew to quickly and easily find and book a crash pad" Joseph McElwee</p>
             </div>
 
             <div className={css.contentMain}>
-              <h2>
-                FindaCrashPad.com was built by flight crew, for flight crew.
-              </h2>
-
+              
               <p>
-                We understand the inconvenience and difficulty that comes along with finding and booking a crash pad when you get assigned to a new base. Crash Pads let you stay comfortably nearby, but they can be difficult to find, book and rent. FindaCrashPad.com was designed to make this process easier for crew members and crash pad owners by facilitating connections and securing the payment process.
-              </p>
-
-              <h3 className={css.subtitle}>Have a Crash Pad you want to list?</h3>
-
-              <p>
-                Owning a crash pad is a great way to work with flight crew and responsibly act as a landlord [See page on HOW TO]. But it is not without challenges. Keeping fluctuations in vacancy to a minimum is crucial to maintaining your bottom line. List with FindaCrashPad.com and minimize the number of empty beds and logistics problems.
+                Find a Crash Pad is an online community built by flight crew members who have stayed in crash pads all over the country. It’s a way to connect crash pad owners with the pilots and flight attendants who need to find quality crash pads without wasting a lot of time. 
               </p>
 
               <p>
-                You can also checkout our{' '}
-                <ExternalLink href={siteFacebookPage}>Facebook</ExternalLink> and{' '}
-                <ExternalLink href={siteTwitterPage}>Twitter</ExternalLink>.
+                Co-founder Joseph McElwee is an airline pilot who remembers booking his first crash pad in Denver, a long process of searches and phone calls to find a place he could get to. When he finally found one with a bed available, the owner asked for a photo of a paper check to process rent payments. 
+              </p>  
+
+              <p>
+		He knew there had to be a better way, which is what he and his brother Matthew have launched – a better way for crash pad owners and flight crew members to connect safely, book securely and save valuable time.         
               </p>
+ 
             </div>
           </div>
         </LayoutWrapperMain>
