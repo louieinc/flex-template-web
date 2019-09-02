@@ -28,20 +28,40 @@ export const amenities = [
     label: 'Grill',
   },
   {
-    key: 'amenity1',
-    label: 'Amenity 1',
+    key: 'washerdryer',
+    label: 'Washer/Dryer',
   },
   {
-    key: 'amenity2',
-    label: 'Amenity 2',
+    key: 'commonarea',
+    label: 'Common Area',
   },
+  {
+    key: 'beddingprovided',
+    label: 'Bedding Provided',
+  },
+  {
+    key: 'cleaningservice',
+    label: 'Cleaning Service',
+  },
+  {
+    key: 'fitness',
+    label: 'Fitness Equipment',
+  },
+  {
+    key: 'keyless',
+    label: 'Keyless Entry',
+  },
+  {
+    key: 'reserveready',
+    label: 'Reserve Ready (less than 60 minutes from the airport)',
+  }
 ];
 
 export const categories = [
-  { key: 'cat1', label: 'Category 1' },
-  { key: 'cat2', label: 'Category 2' },
-  { key: 'cat3', label: 'Category 3' },
-  { key: 'cat4', label: 'Category 4' },
+  { key: 'neutral', label: 'Gender Neutral'},
+  { key: 'male', label: 'Male Only' },
+  { key: 'female', label: 'Female Only' }
+  
 ];
 
 // Price filter configuration
