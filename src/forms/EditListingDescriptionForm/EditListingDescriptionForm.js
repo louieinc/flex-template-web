@@ -113,7 +113,7 @@ const EditListingDescriptionFormComponent = props => (
             name="category"
             categories={categories}
             intl={intl}
-          />*/
+          />
 
           <Button
             className={css.submitButton}
