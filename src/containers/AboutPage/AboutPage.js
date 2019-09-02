@@ -37,7 +37,8 @@ const AboutPage = () => {
 
           <div className={css.contentWrapper}>
             <div className={css.contentSide}>
-              <p>"We wanted to create a modern platform to make it easy for the airline crew to quickly and easily find and book a crash pad" Joseph McElwee</p>
+              <p>"We wanted to create a modern platform to make it easy for the airline crew to quickly and easily find and book a crash pad" </p>
+              <p>Joseph McElwee</p>
             </div>
 
             <div className={css.contentMain}>
