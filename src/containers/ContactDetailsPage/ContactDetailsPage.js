@@ -9,7 +9,7 @@ import { fetchCurrentUser, sendVerificationEmail } from '../../ducks/user.duck';
 import {
   LayoutSideNavigation,
   LayoutWrapperMain,
-  LayoutWrapperAccountSettingsSideNav,
+  LayoutWrapperSideNav,
   LayoutWrapperTopbar,
   LayoutWrapperFooter,
   Footer,
@@ -38,6 +38,30 @@ export const ContactDetailsPageComponent = props => {
     onSubmitContactDetails,
     intl,
   } = props;
+
+  const tabs = [
+    {
+      text: <FormattedMessage id="ContactDetailsPage.contactDetailsTabTitle" />,
+      selected: true,
+      linkProps: {
+        name: 'ContactDetailsPage',
+      },
+    },
+    {
+      text: <FormattedMessage id="ContactDetailsPage.passwordTabTitle" />,
+      selected: false,
+      linkProps: {
+        name: 'PasswordChangePage',
+      },
+    },
+    {
+      text: <FormattedMessage id="ContactDetailsPage.paymentsTabTitle" />,
+      selected: false,
+      linkProps: {
+        name: 'PayoutPreferencesPage',
+      },
+    },
+  ];
 
   const user = ensureCurrentUser(currentUser);
   const currentEmail = user.attributes.email || '';
@@ -73,7 +97,7 @@ export const ContactDetailsPageComponent = props => {
           />
           <UserNav selectedPageName="ContactDetailsPage" />
         </LayoutWrapperTopbar>
-        <LayoutWrapperAccountSettingsSideNav currentTab="ContactDetailsPage" />
+        <LayoutWrapperSideNav tabs={tabs} />
         <LayoutWrapperMain>
           <div className={css.content}>
             <h1 className={css.title}>
