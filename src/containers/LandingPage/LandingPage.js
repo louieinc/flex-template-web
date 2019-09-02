@@ -56,24 +56,30 @@ export const LandingPageComponent = props => {
         <LayoutWrapperTopbar>
           <TopbarContainer />
         </LayoutWrapperTopbar>
-        <LayoutWrapperMain>
-          <div className={css.heroContainer}>
+
+   <LayoutWrapperMain>
+         <div className={css.heroContainer}>
             <SectionHero className={css.hero} history={history} location={location} />
           </div>
-          <ul className={css.sections}>
+          <div className={css.staticPageWrapper}>
+           <div className={css.contentWrapper}>
+          
 
-            <li className={css.section}>
-              <div className={css.sectionContentFirstChild}>
-                
-              </div>
-            </li>
+ 	      <div className={css.contentMain}>
+              <p>              
+                Pilots and flight attendants often have little time to book flight crew crash pads when work keeps them away from home. They need a convenient way to search for the best, vacant, peer-reviewed crash pads to be their temporary homes.
+              </p>
+              <p>
+                Crash pad owners can waste a lot of time and money maintaining different listings, fielding calls from crew members, sharing information and tracking down crash pad payments.
+              </p>
 
-            <li className={css.section}>
-              <div className={css.sectionContent}>
-                <SectionHowItWorks />
-              </div>
-            </li>
-          </ul>
+              <p>
+                FindaCrashPad.com is the first site to bring flight crews and crash pad owners together in one easy-to-use network to book, communicate and pay.
+              </p>  
+
+  	</div>
+          </div>
+	 </div>
         </LayoutWrapperMain>
         <LayoutWrapperFooter>
           <Footer />
