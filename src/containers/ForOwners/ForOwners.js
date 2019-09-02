@@ -31,16 +31,16 @@ const ForOwners = () => {
         </LayoutWrapperTopbar>
 
          <LayoutWrapperMain className={css.staticPageWrapper}>
-          <h1 className={css.pageTitle}>Put your Crash Pad on Autopilot</h1>
+          <h1 className={css.pageTitle}>All seats will be taken as this will be a completely full Crash Pad. </h1>
           <img className={css.coverImage} src={image} alt="Keep your Crash Pad Booked." />
 
  	   <div className={css.contentWrapper}>
-            <div className={css.contentSide}>
-               <h2>Why List a Crash Pad with us?</h2>
-              </div>
+          
 
  	      <div className={css.contentMain}>
-
+              <p>              
+                <h2>Why List a Crash Pad with us?</h2>
+              </p>
               <p>
                 As a crash pad owner, you want to provide a safe, comfortable, quiet place to rest, and you want to fill beds. Every night that one of your beds goes vacant or you spend time fielding calls from crew members, you lose money.
               </p>

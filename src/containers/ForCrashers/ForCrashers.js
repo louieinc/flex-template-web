@@ -31,15 +31,15 @@ const ForCrashers = () => {
         </LayoutWrapperTopbar>
 
           <LayoutWrapperMain className={css.staticPageWrapper}>
-           <h1 className={css.pageTitle}>It's been a long day, finding a place to sleep shouldn't be hard.</h1>
+           <h1 className={css.pageTitle}>It's been a hard day, finding a place to sleep shouldn't be. </h1>
           <img className={css.coverImage} src={image} alt="Relaxing at my Crash Pad." />
           
            <div className={css.contentWrapper}>
-            <div className={css.contentSide}>
-               <h2>Why Book with Us?</h2>
-              </div>
-
+          
  	      <div className={css.contentMain}>
+              <p>
+               <h2>Why Book with Us?</h2>
+              </p>
 
               <p>
                 Commuting can be challenging for any airline crew member, especially when you start at a new airline or change domiciles. Other than someone taking your jump seat at the last minute, finding a crash pad can be one of the least pleasant parts of commuting. 
@@ -52,11 +52,13 @@ const ForCrashers = () => {
               <p>
 		We are making it easier.
               </p> 
-
-          </div>
+              
+            </div>
+            
 	 </div>
-        </LayoutWrapperMain>
 
+        </LayoutWrapperMain>
+ 
         <LayoutWrapperFooter>
           <Footer />
         </LayoutWrapperFooter>

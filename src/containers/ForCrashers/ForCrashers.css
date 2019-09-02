@@ -37,7 +37,7 @@
 
   @media (--viewportMedium) {
     width: 193px;
-    margin-right: 103px;
+    margin-left: 800px;
     margin-top: 8px;
   }
 }
@@ -46,7 +46,7 @@
   width: 90%;
 
   @media (--viewportMedium) {
-    max-width: 650px;
+    max-width: 1056px;
   }
 }
 
