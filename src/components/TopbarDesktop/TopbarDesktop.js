@@ -147,17 +147,7 @@ const TopbarDesktop = props => {
         <span className={css.createListing}>
           <FormattedMessage id="TopbarDesktop.createListing" />
         </span>
-      </NamedLink>
-      <NamedLink name="AboutPage" to={{ hash: '#contact' }} className={css.inboxLink}>
-        <span className={css.createListing}>
-         <FormattedMessage id="Footer.toContactPage" />
-        </span>
-      </NamedLink>
-      <NamedLink name="AboutPage" className={css.inboxLink}>
-        <span className={css.createListing}>
-          <FormattedMessage id="Footer.toAboutPage" />
-        </span>
-      </NamedLink>
+      </NamedLink>      
       <NamedLink name="ForOwners" className={css.inboxLink}>
         <span className={css.createListing}>
           <FormattedMessage id="For Owners" />
