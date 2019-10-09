@@ -15,6 +15,7 @@ import {
   NamedLink,
 } from '../../components';
 import { TopbarSearchForm } from '../../forms';
+import { AirportSearchForm } from '../../forms';
 
 import css from './TopbarDesktop.css';
 
@@ -47,7 +48,7 @@ const TopbarDesktop = props => {
     <TopbarSearchForm
       className={css.searchLink}
       desktopInputRoot={css.topbarSearchWithLeftPadding}
-      form="TopbarSearchFormDesktop"
+      form="AirportSearchForm"
       onSubmit={onSearchSubmit}
       initialValues={initialSearchFormValues}
     />
@@ -142,7 +143,7 @@ const TopbarDesktop = props => {
           alt={intl.formatMessage({ id: 'TopbarDesktop.logo' })}
         />
       </NamedLink>
-      
+      {search}
       <NamedLink className={css.createListingLink} name="NewListingPage">
         <span className={css.createListing}>
           <FormattedMessage id="TopbarDesktop.createListing" />

@@ -26,7 +26,7 @@ const locationBounds = (latlng, distance) => {
     return null;
   }
 console.log(latlng); console.log(distance);
-  const bounds = new window.mapboxgl.LngLat(latlng.lng, latlng.lat).toBounds(10000);
+  const bounds = new window.mapboxgl.LngLat(latlng.lng, latlng.lat).toBounds(42000);
   return new SDKLatLngBounds(
     new SDKLatLng(bounds.getNorth(), bounds.getEast()),
     new SDKLatLng(bounds.getSouth(), bounds.getWest())

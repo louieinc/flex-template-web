@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Form as FinalForm, Field } from 'react-final-form';
 import { intlShape, injectIntl } from 'react-intl';
 import classNames from 'classnames';
-import { Form, LocationAutocompleteInput } from '../../components';
+import { Form, LocationAutocompleteInputAirport } from '../../components';
 
 import css from './TopbarSearchForm.css';
 
@@ -60,7 +60,7 @@ class TopbarSearchFormComponent extends Component {
 
                   const searchInput = { ...restInput, onChange: searchOnChange };
                   return (
-                    <LocationAutocompleteInput
+                    <LocationAutocompleteInputAirport
                       className={isMobile ? css.mobileInputRoot : desktopInputRootClass}
                       iconClassName={isMobile ? css.mobileIcon : css.desktopIcon}
                       inputClassName={isMobile ? css.mobileInput : css.desktopInput}

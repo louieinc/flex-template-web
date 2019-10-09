@@ -10,11 +10,7 @@ import { withViewport } from '../../util/contextHelpers';
 import { parse, stringify } from '../../util/urlHelpers';
 import { createResourceLocatorString} from '../../util/routes';
 import { propTypes } from '../../util/types';
-
-
 import { AirportSearchForm } from '../../forms';
-
-
 import css from './AirportSearch.css';
 
 const MAX_MOBILE_SCREEN_WIDTH = 768;
@@ -98,6 +94,7 @@ class AirportSearchComponent extends Component {
       address: search,
       bounds,
     };console.log(this.props);console.log(history);
+    
     history.push(createResourceLocatorString('SearchPage', routeConfiguration(), {}, searchParams));
   }
 
