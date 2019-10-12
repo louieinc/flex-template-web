@@ -11,6 +11,15 @@ import ManageAvailabilityCalendar from './ManageAvailabilityCalendar';
 import css from './EditListingAvailabilityForm.css';
 
 export class EditListingAvailabilityFormComponent extends Component {
+
+    seatsChanged = event =>{        
+      for(var i = 0; i < this.props.availabilityPlan.entries.length; i++){
+          this.props.availabilityPlan.entries[i].seats = parseInt(event.target.value);
+      }
+    };      
+
+    
+
   render() {
     return (
       <FinalForm
@@ -43,6 +52,7 @@ export class EditListingAvailabilityFormComponent extends Component {
           const submitReady = updated && pristine;
           const submitInProgress = updateInProgress;
           const submitDisabled = invalid || disabled || submitInProgress;
+          
 
           return (
             <Form className={classes} onSubmit={handleSubmit}>
@@ -54,7 +64,7 @@ export class EditListingAvailabilityFormComponent extends Component {
                   listingId={listingId}
                 />
               </div>
-
+              Number of beds <input min="1" type="number"  onChange={this.seatsChanged}></input>
               <Button
                 className={css.submitButton}
                 type="submit"

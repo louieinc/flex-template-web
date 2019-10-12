@@ -28,6 +28,7 @@
     "lodash": "^4.17.14",
     "mapbox-gl-multitouch": "^1.0.3",
     "moment": "^2.22.2",
+    "node-sass": "^4.12.0",
     "object.entries": "^1.0.4",
     "object.values": "^1.0.4",
     "path-to-regexp": "^2.4.0",
