@@ -840,7 +840,7 @@
   "Topbar.genericError": "Oh no, something went wrong. Please check your network connection and try again.",
   "Topbar.logoIcon": "Go to homepage",
   "Topbar.menuIcon": "Open menu",
-  "Topbar.mobileSearchHelp": "Tip: You can also search crash pads by zip code, for example \"00500\" or city district – \"Sörnäinen\".",
+  "Topbar.mobileSearchHelp": "Search by airport code or city",
   "Topbar.searchIcon": "Open search",
   "TopbarDesktop.accountSettingsLink": "Account settings",
   "TopbarDesktop.createListing": "+ Post a Crash Pad",

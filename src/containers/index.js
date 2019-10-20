@@ -25,3 +25,4 @@ export { default as TopbarContainer } from './TopbarContainer/TopbarContainer';
 export { default as TransactionPage } from './TransactionPage/TransactionPage';
 export { default as ForOwners } from './ForOwners/ForOwners';
 export { default as ForCrashers } from './ForCrashers/ForCrashers';
+export { default as ContactUs } from './ContactUs/ContactUs';
