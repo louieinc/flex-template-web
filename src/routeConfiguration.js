@@ -24,7 +24,8 @@ import {
   TermsOfServicePage,
   TransactionPage,
   ForOwners,
-  ForCrashers
+  ForCrashers,
+  ContactUs
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -58,6 +59,11 @@ const routeConfiguration = () => {
       path: '/about',
       name: 'AboutPage',
       component: AboutPage,
+    },
+    {
+      path: '/contactus',
+      name: 'ContactUs',
+      component: ContactUs,
     },
     {
       path: '/s',

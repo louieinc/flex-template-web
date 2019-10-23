@@ -20,6 +20,7 @@ import {
   TopbarMobileMenu,
 } from '../../components';
 import { TopbarSearchForm } from '../../forms';
+import { AirportSearchForm } from '../../forms';
 
 import MenuIcon from './MenuIcon';
 import SearchIcon from './SearchIcon';
@@ -198,6 +199,23 @@ class TopbarComponent extends Component {
             <MenuIcon className={css.menuIcon} />
             {notificationDot}
           </Button>
+          <NamedLink name="ForOwners" className={css.inboxLink}>
+            <span className={css.createListing}>
+              <FormattedMessage id="For Owners" />
+            </span>
+          </NamedLink>
+          <NamedLink name="ForCrashers" className={css.inboxLink}>
+            <span className={css.createListing}>
+              <FormattedMessage id="For Crashers" />
+            </span>
+          </NamedLink>
+          <Button
+            rootClassName={css.searchMenu}
+            onClick={this.handleMobileSearchOpen}
+            title={intl.formatMessage({ id: 'Topbar.searchIcon' })}
+          >
+            <SearchIcon className={css.searchMenuIcon} />
+          </Button>
           <NamedLink
             className={css.home}
             name="LandingPage"
@@ -205,6 +223,7 @@ class TopbarComponent extends Component {
           >
             <Logo format="mobile" />
           </NamedLink>
+
           
         </div>
         <div className={css.desktop}>
@@ -229,7 +248,25 @@ class TopbarComponent extends Component {
         >
           {authInProgress ? null : mobileMenu}
         </Modal>
-        
+        <Modal
+          id="TopbarMobileSearch"
+          containerClassName={css.modalContainer}
+          isOpen={isMobileSearchOpen}
+          onClose={this.handleMobileSearchClose}
+          onManageDisableScrolling={onManageDisableScrolling}
+        >
+          <div className={css.searchContainer}>
+            <TopbarSearchForm
+              form="AirportSearchForm"
+              onSubmit={this.handleSubmit}
+              initialValues={initialSearchFormValues}
+              isMobile
+            />
+            <p className={css.mobileHelp}>
+              <FormattedMessage id="Topbar.mobileSearchHelp" />
+            </p>
+          </div>
+        </Modal>
           
         
         <ModalMissingInformation
