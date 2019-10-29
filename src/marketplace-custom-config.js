@@ -50,10 +50,6 @@ export const amenities = [
   {
     key: 'keyless',
     label: 'Keyless Entry',
-  },
-  {
-    key: 'reserveready',
-    label: 'Reserve Ready (less than 60 minutes from the airport)',
   }
 ];
 
