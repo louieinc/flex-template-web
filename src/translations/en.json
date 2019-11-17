@@ -319,6 +319,7 @@
   "ListingPage.closedListing": "This listing has been closed and can't be booked.",
   "ListingPage.contactUser": "Contact",
   "ListingPage.descriptionTitle": "About this crash pad",
+  "ListingPage.bedsAvailableTonight": "Beds available tonight",
   "ListingPage.editListing": "Edit listing",
   "ListingPage.editProfileLink": "Edit profile",
   "ListingPage.errorLoadingListingMessage": "Could not load listing. Please try again.",
