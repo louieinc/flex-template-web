@@ -13,40 +13,40 @@ import {
   LayoutWrapperTopbar,
   LayoutWrapperFooter,
   Footer,
-  TermsOfService,
+  CommunityGuide,
 } from '../../components';
 import config from '../../config';
 
-import css from './TermsOfServicePage.css';
+import css from './CommunityGuidePage.css';
 
-const TermsOfServicePageComponent = props => {
+const CommunityGuidePageComponent = props => {
   const { scrollingDisabled, intl } = props;
 
   const tabs = [
     {
-      text: intl.formatMessage({ id: 'TermsOfServicePage.privacyTabTitle' }),
+      text: intl.formatMessage({ id: 'CommunityGuidePage.privacyTabTitle' }),
       selected: false,
       linkProps: {
         name: 'PrivacyPolicyPage',
       },
     },
     {
-      text: intl.formatMessage({ id: 'TermsOfServicePage.tosTabTitle' }),
-      selected: true,
+      text: intl.formatMessage({ id: 'CommunityGuidePage.tosTabTitle' }),
+      selected: false,
       linkProps: {
         name: 'TermsOfServicePage',
       },
     },
     {
-      text: intl.formatMessage({ id: 'TermsOfServicePage.cgTabTitle' }),
-      selected: false,
+      text: intl.formatMessage({ id: 'CommunityGuidePage.cgTabTitle' }),
+      selected: true,
       linkProps: {
         name: 'CommunityGuidePage',
       },
     },
   ];
   const siteTitle = config.siteTitle;
-  const schemaTitle = intl.formatMessage({ id: 'TermsOfServicePage.schemaTitle' }, { siteTitle });
+  const schemaTitle = intl.formatMessage({ id: 'CommunityGuide.schemaTitle' }, { siteTitle });
   const schema = {
     '@context': 'http://schema.org',
     '@type': 'WebPage',
@@ -56,15 +56,15 @@ const TermsOfServicePageComponent = props => {
     <Page title={schemaTitle} scrollingDisabled={scrollingDisabled} schema={schema}>
       <LayoutSideNavigation>
         <LayoutWrapperTopbar>
-          <TopbarContainer currentPage="TermsOfServicePage" />
+          <TopbarContainer currentPage="CommunityGuidePage" />
         </LayoutWrapperTopbar>
         <LayoutWrapperSideNav tabs={tabs} />
         <LayoutWrapperMain>
           <div className={css.content}>
             <h1 className={css.heading}>
-              <FormattedMessage id="TermsOfServicePage.heading" />
+              <FormattedMessage id="CommunityGuidePage.heading" />
             </h1>
-            <TermsOfService />
+            <CommunityGuide />
           </div>
         </LayoutWrapperMain>
         <LayoutWrapperFooter>
@@ -77,7 +77,7 @@ const TermsOfServicePageComponent = props => {
 
 const { bool } = PropTypes;
 
-TermsOfServicePageComponent.propTypes = {
+CommunityGuidePageComponent.propTypes = {
   scrollingDisabled: bool.isRequired,
 
   // from injectIntl
@@ -90,9 +90,9 @@ const mapStateToProps = state => {
   };
 };
 
-const TermsOfServicePage = compose(
+const CommunityGuidePage = compose(
   connect(mapStateToProps),
   injectIntl
-)(TermsOfServicePageComponent);
+)(CommunityGuidePageComponent);
 
-export default TermsOfServicePage;
+export default CommunityGuidePage;

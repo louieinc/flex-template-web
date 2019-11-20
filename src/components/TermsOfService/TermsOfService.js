@@ -11,7 +11,7 @@ const TermsOfService = props => {
   // prettier-ignore
   return (
     <div className={classes}>
-      <p className={css.lastUpdated}>Last updated: October 30, 2017</p>
+      <p className={css.lastUpdated}>Last updated: November 18, 2019</p>
 
       <p>
         Thank you for using Saunatime! Ut enim ad minim veniam, quis nostrud exercitation ullamco

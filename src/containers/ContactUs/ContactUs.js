@@ -29,13 +29,23 @@ const ContactUs = () => {
           <TopbarContainer />
         </LayoutWrapperTopbar>
         <LayoutWrapperMain>
-          <h1>Let us know what you think. Fill out your information below or drop us a note at help@findacrashpad.com.</h1>
-          <div>
-            <NamedLink name="LandingPage">Go to home page</NamedLink> or
-            <ExternalLink href="https://google.com">
-              Go to Google
-            </ExternalLink>
-          </div>
+
+        <div className={css.contentWrapper}>
+        <div className={css.contentMain}>
+
+        <h2>Let us know what you think. Fill out your information below or drop us a note at help@findacrashpad.com.</h2>
+
+          <p>
+          <NamedLink name="LandingPage">Go to home page</NamedLink> or
+          <ExternalLink href="https://google.com">
+            Go to Google
+          </ExternalLink>
+          </p>
+
+         </div>
+         </div>
+
+
         </LayoutWrapperMain>
         <LayoutWrapperFooter>
           <Footer />
@@ -46,4 +56,3 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
-
