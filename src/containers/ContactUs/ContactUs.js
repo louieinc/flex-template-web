@@ -11,6 +11,7 @@ import {
 } from '../../components';
 
 import css from './ContactUs.css';
+import image from './ContactUsImage.jpg';
 
 const ContactUs = () => {
   return (
@@ -28,25 +29,37 @@ const ContactUs = () => {
         <LayoutWrapperTopbar>
           <TopbarContainer />
         </LayoutWrapperTopbar>
-        <LayoutWrapperMain>
 
-        <div className={css.contentWrapper}>
+
+          <LayoutWrapperMain className={css.staticPageWrapper}>
+           <h1 className={css.pageTitle}>It's been a hard day, finding a place to sleep shouldn't be. </h1>
+          <img className={css.coverImage} src={image} alt="Relaxing at my Crash Pad." />
+          
+           <div className={css.contentWrapper}>
+          
         <div className={css.contentMain}>
+              <p>
+               <h2>Why Book with Us?</h2>
+              </p>
 
-        <h2>Let us know what you think. Fill out your information below or drop us a note at help@findacrashpad.com.</h2>
+              <p>
+                Commuting can be challenging for any airline crew member, especially when you start at a new airline or change domiciles. Other than someone taking your jump seat at the last minute, finding a crash pad can be one of the least pleasant parts of commuting. 
+              </p>
 
-          <p>
-          <NamedLink name="LandingPage">Go to home page</NamedLink> or
-          <ExternalLink href="https://google.com">
-            Go to Google
-          </ExternalLink>
-          </p>
+              <p>
+                FindaCrashPad.com was built by crew members FOR crew members who are tired of searching multiple listings, being disappointed by bad pads or dealing with payment methods that can seem shady. 
+              </p>  
 
-         </div>
-         </div>
-
+              <p>
+    We are making it easier.
+              </p> 
+              
+            </div>
+            
+   </div>
 
         </LayoutWrapperMain>
+ 
         <LayoutWrapperFooter>
           <Footer />
         </LayoutWrapperFooter>

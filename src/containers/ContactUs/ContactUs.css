@@ -1,7 +1,5 @@
 @import '../../marketplace.css';
 
-@import '../../marketplace.css';
-
 .pageTitle {
   text-align: center;
 }
@@ -60,4 +58,23 @@
 
 .ulist {
   list-style-type: circle;
+=======
+    margin-left: 800px;
+    margin-top: 8px;
+  }
 }
+
+.contentMain {
+  width: 90%;
+
+  @media (--viewportMedium) {
+    max-width: 1056px;
+  }
+}
+
+.subtitle {
+  @apply --marketplaceH3FontStyles;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+

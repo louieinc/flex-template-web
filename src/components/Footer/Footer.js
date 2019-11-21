@@ -79,6 +79,7 @@ const Footer = props => {
                 </p>
               </div>
             </div>
+
             <div className={css.infoLinks}>
               <ul className={css.list}>
                 <li className={css.listItem}>
