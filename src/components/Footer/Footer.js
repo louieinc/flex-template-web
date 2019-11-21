@@ -62,7 +62,7 @@ const Footer = props => {
     <div className={classes}>
       <div className={css.topBorderWrapper}>
         <div className={css.content}>
-          
+
           <div className={css.links}>
             <div className={css.organization} id="organization">
               <NamedLink name="LandingPage" className={css.logoLink}>
@@ -79,21 +79,30 @@ const Footer = props => {
                 </p>
               </div>
             </div>
-            
-            
+
+            <div className={css.infoLinks}>
+              <ul className={css.list}>
+                <li className={css.listItem}>
+                  <NamedLink name="AboutPage" className={css.link}>
+                    <FormattedMessage id="Footer.toAboutPage" />
+                  </NamedLink>
+                </li>
+                <li className={css.listItem}>
+                  <NamedLink name="ContactUs" className={css.link}>
+                    <FormattedMessage id="Footer.toContactPage" />
+                  </NamedLink>
+                </li>
+              </ul>
+            </div>
+
             <div className={css.extraLinks}>
-              
+
               <div className={css.legalMatters}>
                 <ul className={css.tosAndPrivacy}>
                   <li>
-                    <NamedLink name="AboutPage" className={css.legalLink}>
-                      <FormattedMessage id="Footer.toAboutPage" />
-                    </NamedLink>
-                  </li>
-                  <li>
-                    <NamedLink name="ContactUs" className={css.legalLink}>
-                      <FormattedMessage id="Footer.toContactPage" />
-                    </NamedLink>
+                  <NamedLink name="CommunityGuidePage" className={css.legalLink}>
+                    <FormattedMessage id="Footer.CommunityGuide" />
+                  </NamedLink>
                   </li>
                   <li>
                     <NamedLink name="TermsOfServicePage" className={css.legalLink}>

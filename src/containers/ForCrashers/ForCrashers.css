@@ -56,3 +56,6 @@
   margin-bottom: 24px;
 }
 
+.ulist {
+  list-style-type: circle;
+}

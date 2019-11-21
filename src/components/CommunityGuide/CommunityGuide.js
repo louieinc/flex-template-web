@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import css from './PrivacyPolicy.css';
+import css from './CommunityGuide.css';
 
-const PrivacyPolicy = props => {
+const CommunityGuide = props => {
   const { rootClassName, className } = props;
   const classes = classNames(rootClassName || css.root, className);
 
@@ -60,16 +60,16 @@ const PrivacyPolicy = props => {
   );
 };
 
-PrivacyPolicy.defaultProps = {
+CommunityGuide.defaultProps = {
   rootClassName: null,
   className: null,
 };
 
 const { string } = PropTypes;
 
-PrivacyPolicy.propTypes = {
+CommunityGuide.propTypes = {
   rootClassName: string,
   className: string,
 };
 
-export default PrivacyPolicy;
+export default CommunityGuide;

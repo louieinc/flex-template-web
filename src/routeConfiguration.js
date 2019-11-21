@@ -25,7 +25,8 @@ import {
   TransactionPage,
   ForOwners,
   ForCrashers,
-  ContactUs
+  ContactUs,
+  CommunityGuidePage
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -276,6 +277,11 @@ const routeConfiguration = () => {
       path: '/privacy-policy',
       name: 'PrivacyPolicyPage',
       component: props => <PrivacyPolicyPage {...props} />,
+    },
+    {
+      path: '/community-guidelines',
+      name: 'CommunityGuidePage',
+      component: props => <CommunityGuidePage {...props} />,
     },
     {
       path: '/styleguide',

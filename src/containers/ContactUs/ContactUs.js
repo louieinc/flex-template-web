@@ -30,6 +30,7 @@ const ContactUs = () => {
           <TopbarContainer />
         </LayoutWrapperTopbar>
 
+
           <LayoutWrapperMain className={css.staticPageWrapper}>
            <h1 className={css.pageTitle}>It's been a hard day, finding a place to sleep shouldn't be. </h1>
           <img className={css.coverImage} src={image} alt="Relaxing at my Crash Pad." />
@@ -68,4 +69,3 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
-

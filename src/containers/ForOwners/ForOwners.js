@@ -17,10 +17,10 @@ const ForOwners = () => {
   // prettier-ignore
   return (
     <StaticPage
-      title="Crash Pad for Owners"
+      title="Crash Pads for Owners"
       schema={{
         '@context': 'http://schema.org',
-        '@type': 'Crash Pad for Owners',
+        '@type': 'Crash Pads for Owners',
         description: 'Put up your no vacancy sign',
         name: 'For Owners',
       }}

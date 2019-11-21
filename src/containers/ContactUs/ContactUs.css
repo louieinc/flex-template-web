@@ -37,6 +37,28 @@
 
   @media (--viewportMedium) {
     width: 193px;
+    margin-right: 103px;
+    margin-top: 8px;
+  }
+}
+
+.contentMain {
+  width: 90%;
+
+  @media (--viewportMedium) {
+    max-width: 1056px;
+  }
+}
+
+.subtitle {
+  @apply --marketplaceH3FontStyles;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.ulist {
+  list-style-type: circle;
+=======
     margin-left: 800px;
     margin-top: 8px;
   }
