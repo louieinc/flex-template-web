@@ -13,54 +13,54 @@ import {
   LayoutWrapperTopbar,
   LayoutWrapperFooter,
   Footer,
-  TermsOfService,
+  FeesExplained,
 } from '../../components';
 import config from '../../config';
 
-import css from './TermsOfServicePage.css';
+import css from './FeesExplainedPage.css';
 
-const TermsOfServicePageComponent = props => {
+const FeesExplainedPageComponent = props => {
   const { scrollingDisabled, intl } = props;
 
   const tabs = [
     {
-      text: intl.formatMessage({ id: 'TermsOfServicePage.privacyTabTitle' }),
+      text: intl.formatMessage({ id: 'FeesExplainedPage.privacyTabTitle' }),
       selected: false,
       linkProps: {
         name: 'PrivacyPolicyPage',
       },
     },
     {
-      text: intl.formatMessage({ id: 'TermsOfServicePage.tosTabTitle' }),
-      selected: true,
+      text: intl.formatMessage({ id: 'FeesExplainedPage.tosTabTitle' }),
+      selected: false,
       linkProps: {
         name: 'TermsOfServicePage',
       },
     },
     {
-      text: intl.formatMessage({ id: 'TermsOfServicePage.cgTabTitle' }),
+      text: intl.formatMessage({ id: 'FeesExplainedPage.cgTabTitle' }),
       selected: false,
       linkProps: {
         name: 'CommunityGuidePage',
       },
     },
     {
-      text: intl.formatMessage({ id: 'TermsOfServicePage.cpTabTitle' }),
+      text: intl.formatMessage({ id: 'FeesExplainedPage.cpTabTitle' }),
       selected: false,
       linkProps: {
         name: 'CancelPolicyPage',
       },
     },
     {
-      text: intl.formatMessage({ id: 'TermsOfServicePage.feTabTitle' }),
-      selected: false,
+      text: intl.formatMessage({ id: 'FeesExplainedPage.feTabTitle' }),
+      selected: true,
       linkProps: {
         name: 'FeesExplainedPage',
       },
     },
   ];
   const siteTitle = config.siteTitle;
-  const schemaTitle = intl.formatMessage({ id: 'TermsOfServicePage.schemaTitle' }, { siteTitle });
+  const schemaTitle = intl.formatMessage({ id: 'FeesExplainedPage.schemaTitle' }, { siteTitle });
   const schema = {
     '@context': 'http://schema.org',
     '@type': 'WebPage',
@@ -70,15 +70,15 @@ const TermsOfServicePageComponent = props => {
     <Page title={schemaTitle} scrollingDisabled={scrollingDisabled} schema={schema}>
       <LayoutSideNavigation>
         <LayoutWrapperTopbar>
-          <TopbarContainer currentPage="TermsOfServicePage" />
+          <TopbarContainer currentPage="FeesExplainedPage" />
         </LayoutWrapperTopbar>
         <LayoutWrapperSideNav tabs={tabs} />
         <LayoutWrapperMain>
           <div className={css.content}>
             <h1 className={css.heading}>
-              <FormattedMessage id="TermsOfServicePage.heading" />
+              <FormattedMessage id="FeesExplainedPage.heading" />
             </h1>
-            <TermsOfService />
+            <FeesExplained />
           </div>
         </LayoutWrapperMain>
         <LayoutWrapperFooter>
@@ -91,7 +91,7 @@ const TermsOfServicePageComponent = props => {
 
 const { bool } = PropTypes;
 
-TermsOfServicePageComponent.propTypes = {
+FeesExplainedPageComponent.propTypes = {
   scrollingDisabled: bool.isRequired,
 
   // from injectIntl
@@ -104,9 +104,9 @@ const mapStateToProps = state => {
   };
 };
 
-const TermsOfServicePage = compose(
+const FeesExplainedPage = compose(
   connect(mapStateToProps),
   injectIntl
-)(TermsOfServicePageComponent);
+)(FeesExplainedPageComponent);
 
-export default TermsOfServicePage;
+export default FeesExplainedPage;
