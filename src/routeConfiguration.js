@@ -26,7 +26,9 @@ import {
   ForOwners,
   ForCrashers,
   ContactUs,
-  CommunityGuidePage
+  CommunityGuidePage,
+  CancelPolicyPage,
+  FeesExplainedPage,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -282,6 +284,16 @@ const routeConfiguration = () => {
       path: '/community-guidelines',
       name: 'CommunityGuidePage',
       component: props => <CommunityGuidePage {...props} />,
+    },
+    {
+      path: '/cancel-policy',
+      name: 'CancelPolicyPage',
+      component: props => <CancelPolicyPage {...props} />,
+    },
+    {
+      path: '/fees-explained',
+      name: 'FeesExplainedPage',
+      component: props => <FeesExplainedPage {...props} />,
     },
     {
       path: '/styleguide',

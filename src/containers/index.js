@@ -27,3 +27,5 @@ export { default as ForOwners } from './ForOwners/ForOwners';
 export { default as ForCrashers } from './ForCrashers/ForCrashers';
 export { default as ContactUs } from './ContactUs/ContactUs';
 export { default as CommunityGuidePage } from './CommunityGuidePage/CommunityGuidePage';
+export { default as CancelPolicyPage } from './CancelPolicyPage/CancelPolicyPage';
+export { default as FeesExplainedPage } from './FeesExplainedPage/FeesExplainedPage';

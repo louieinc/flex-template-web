@@ -44,6 +44,20 @@ const PrivacyPolicyPageComponent = props => {
         name: 'CommunityGuidePage',
       },
     },
+    {
+      text: intl.formatMessage({ id: 'PrivacyPolicyPage.cpTabTitle' }),
+      selected: false,
+      linkProps: {
+        name: 'CancelPolicyPage',
+      },
+    },
+    {
+      text: intl.formatMessage({ id: 'PrivacyPolicyPage.feTabTitle' }),
+      selected: false,
+      linkProps: {
+        name: 'FeesExplainedPage',
+      },
+    },
   ];
   const siteTitle = config.siteTitle;
   const schemaTitle = intl.formatMessage({ id: 'PrivacyPolicyPage.schemaTitle' }, { siteTitle });
