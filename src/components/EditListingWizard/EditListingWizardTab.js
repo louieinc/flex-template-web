@@ -29,7 +29,7 @@ export const LOCATION = 'location';
 export const PRICING = 'pricing';
 export const PHOTOS = 'photos';
 
-// EditListingWizardTab component supports these tabs
+// EditListingWizardTab component supports these tabs..
 export const SUPPORTED_TABS = [
   DESCRIPTION,
   FEATURES,
