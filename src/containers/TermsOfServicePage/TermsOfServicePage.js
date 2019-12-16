@@ -44,20 +44,6 @@ const TermsOfServicePageComponent = props => {
         name: 'CommunityGuidePage',
       },
     },
-    {
-      text: intl.formatMessage({ id: 'TermsOfServicePage.cpTabTitle' }),
-      selected: false,
-      linkProps: {
-        name: 'CancelPolicyPage',
-      },
-    },
-    {
-      text: intl.formatMessage({ id: 'TermsOfServicePage.feTabTitle' }),
-      selected: false,
-      linkProps: {
-        name: 'FeesExplainedPage',
-      },
-    },
   ];
   const siteTitle = config.siteTitle;
   const schemaTitle = intl.formatMessage({ id: 'TermsOfServicePage.schemaTitle' }, { siteTitle });

@@ -44,23 +44,9 @@ const CommunityGuidePageComponent = props => {
         name: 'CommunityGuidePage',
       },
     },
-    {
-      text: intl.formatMessage({ id: 'CommunityGuidePage.cpTabTitle' }),
-      selected: false,
-      linkProps: {
-        name: 'CancelPolicyPage',
-      },
-    },
-    {
-      text: intl.formatMessage({ id: 'CommunityGuidePage.feTabTitle' }),
-      selected: false,
-      linkProps: {
-        name: 'FeesExplainedPage',
-      },
-    },
   ];
   const siteTitle = config.siteTitle;
-  const schemaTitle = intl.formatMessage({ id: 'CommunityGuidePage.schemaTitle' }, { siteTitle });
+  const schemaTitle = intl.formatMessage({ id: 'CommunityGuide.schemaTitle' }, { siteTitle });
   const schema = {
     '@context': 'http://schema.org',
     '@type': 'WebPage',

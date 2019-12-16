@@ -65,7 +65,7 @@ const months = range(1, 13);
 
 // Show a certain number of years up to the current year
 const currentYear = new Date().getFullYear();
-const yearsToShow = 120;
+const yearsToShow = 80;
 const years = range(currentYear, currentYear - yearsToShow, -1);
 
 class BirthdayInputComponent extends Component {

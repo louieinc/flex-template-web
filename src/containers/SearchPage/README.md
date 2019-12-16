@@ -62,7 +62,7 @@ if SearchMap's bounds have changed enough.
 
 See the [filters documentation](../../../docs/search-filters.md).
 
-### SearchPage schema / SEO
+### SeachPage schema / SEO
 
 Schema is created inside `createSearchResultSchema` in _SearchPage.helpers.js_. It needs listings
 and address to make meaningful JSON-LD presentation for search engines.
