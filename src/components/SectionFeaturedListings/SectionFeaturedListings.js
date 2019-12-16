@@ -29,7 +29,7 @@ class FeaturedListings extends Component{
     
     const sharetribeSdk = require('sharetribe-flex-sdk');
     const sdk = sharetribeSdk.createInstance({
-      clientId: '90eb1dc4-bf89-4a9f-9d8d-020b95fb9daf'
+      clientId: '8c3dba56-b24e-4f1b-98da-4e40d9a9930c'
     });
 
     sdk.listings.query({
@@ -49,17 +49,17 @@ class FeaturedListings extends Component{
         var listing1Idx = Math.floor(Math.random() * res.data.data.length);
         var unique = false;
         var listing2Idx;
-        while(unique==false){
+        while(unique===false){
           listing2Idx = Math.floor(Math.random() * res.data.data.length);
-          if(listing2Idx != listing1Idx){
+          if(listing2Idx !== listing1Idx){
             unique = true;
           }
         }
         unique = false;
         var listing3Idx
-        while(unique==false){
+        while(unique===false){
           listing3Idx = Math.floor(Math.random() * res.data.data.length);
-          if(listing3Idx != listing1Idx && listing3Idx != listing2Idx){
+          if(listing3Idx !== listing1Idx && listing3Idx !== listing2Idx){
             unique = true;
           }
         }
@@ -73,13 +73,13 @@ class FeaturedListings extends Component{
       
 
       var data = [];
-      for(var i=0; i<listingIdxs.length;i++){        
+      for(i=0; i<listingIdxs.length;i++){        
         var listing = {id:res.data.data[listingIdxs[i]].id.uuid, title:res.data.data[listingIdxs[i]].attributes.title, authorId:res.data.data[listingIdxs[i]].relationships.author.data.id.uuid};
         for(var j=0;j<res.data.included.length;j++){          
-          if(res.data.data[listingIdxs[i]].relationships.images.data[0].id.uuid == res.data.included[j].id.uuid){            
+          if(res.data.data[listingIdxs[i]].relationships.images.data[0].id.uuid === res.data.included[j].id.uuid){            
             listing.imageUrl = res.data.included[j].attributes.variants["landscape-crop"].url;
           }
-          if(listing.authorId == res.data.included[j].id.uuid){
+          if(listing.authorId === res.data.included[j].id.uuid){
             listing.auhorName = res.data.included[j].attributes.profile.displayName;
           }
         }
@@ -88,8 +88,8 @@ class FeaturedListings extends Component{
         
       }
 
-      for(var i=0;3-data.length;i++){
-        data.push({id:'xxx', title:'', imageUrl:'https://drive.google.com/uc?id=1KCJ4Dn-jSAxy3FtH713FxDy_73HJmYmi',authorName:''});
+      for(i=0;3-data.length;i++){
+        data.push({id:'xxx', title:'', imageUrl:'',authorName:''});
       }
       //force re-render
       this.setState({promiseIsResolved: true, data: data});
