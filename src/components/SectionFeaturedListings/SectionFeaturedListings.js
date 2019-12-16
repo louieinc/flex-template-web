@@ -29,7 +29,7 @@ class FeaturedListings extends Component{
     
     const sharetribeSdk = require('sharetribe-flex-sdk');
     const sdk = sharetribeSdk.createInstance({
-      clientId: '90eb1dc4-bf89-4a9f-9d8d-020b95fb9daf'
+      clientId: '8c3dba56-b24e-4f1b-98da-4e40d9a9930c'
     });
 
     sdk.listings.query({
