@@ -16,7 +16,7 @@ import {
     LayoutWrapperMain,
     LayoutWrapperFooter,
     Footer,
-    SectionFeaturedListings,
+    SectionFeaturedListings
 } from '../../components';
 import { TopbarContainer } from '../../containers';
 
@@ -71,7 +71,7 @@ export const LandingPageComponent = props => {
                         </li>
                         <li className={css.section}>
                             <div className={css.sectionContent}>
-                                <SectionLocations />
+                                <SectionLocations /> 
                             </div>
                         </li>
 
@@ -94,7 +94,7 @@ export const LandingPageComponent = props => {
                             </div>
                         </li>
                     </ul>
-
+                    
                 </LayoutWrapperMain>
                 <LayoutWrapperFooter>
                     <Footer />
