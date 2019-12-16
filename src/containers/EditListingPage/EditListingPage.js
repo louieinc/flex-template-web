@@ -1,3 +1,4 @@
+import React from 'react';
 import { bool, func, object, shape, string, oneOf } from 'prop-types';
 import { compose } from 'redux';
 import { withRouter } from 'react-router-dom';
@@ -38,7 +39,7 @@ import css from './EditListingPage.css';
 
 const { UUID } = sdkTypes;
 
-// N.B. All the presentational content needs to be extracted to their own components.
+// N.B. All the presentational content needs to be extracted to their own components
 export const EditListingPageComponent = props => {
   const {
     currentUser,
