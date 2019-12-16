@@ -89,7 +89,7 @@ class FeaturedListings extends Component{
       }
 
       for(i=0;3-data.length;i++){
-        data.push({id:'xxx', title:'', imageUrl:'https://drive.google.com/uc?id=1KCJ4Dn-jSAxy3FtH713FxDy_73HJmYmi',authorName:''});
+        data.push({id:'xxx', title:'', imageUrl:'',authorName:''});
       }
       //force re-render
       this.setState({promiseIsResolved: true, data: data});
