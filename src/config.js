@@ -44,7 +44,7 @@ const bookingUnitType = 'line-item/night';
 // Should the application fetch available time slots (currently defined as
 // start and end dates) to be shown on listing page.
 const enableAvailability = process.env.REACT_APP_AVAILABILITY_ENABLED === 'true';
-
+console.log(enableAvailability);
 // A maximum number of days forwards during which a booking can be made.
 // This is limited due to Stripe holding funds up to 90 days from the
 // moment they are charged. Also note that available time slots can only
