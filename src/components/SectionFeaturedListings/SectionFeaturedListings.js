@@ -24,8 +24,7 @@ class FeaturedListings extends Component{
   constructor(props) {
     super(props);
 
-    this.state = {promiseIsResolved:false};
-
+   this.state = {promiseIsResolved:false};
 
     const sharetribeSdk = require('sharetribe-flex-sdk');
     const sdk = sharetribeSdk.createInstance({
@@ -33,7 +32,6 @@ class FeaturedListings extends Component{
     });
 
     sdk.listings.query({
-
       price: "1,16000",
       "include": [
         "author",
@@ -44,6 +42,7 @@ class FeaturedListings extends Component{
       ]
 
     }).then(res => {
+
       var listingIdxs = [];
       if(res.data.data.length > 3){
         var listing1Idx = Math.floor(Math.random() * res.data.data.length);
@@ -69,6 +68,7 @@ class FeaturedListings extends Component{
         for(var i=0;i<res.data.data.length;i++){
           listingIdxs.push(i);
         }
+
       }
 
 
@@ -77,12 +77,14 @@ class FeaturedListings extends Component{
         var listing = {id:res.data.data[listingIdxs[i]].id.uuid, title:res.data.data[listingIdxs[i]].attributes.title, authorId:res.data.data[listingIdxs[i]].relationships.author.data.id.uuid};
         for(var j=0;j<res.data.included.length;j++){
           if(res.data.data[listingIdxs[i]].relationships.images.data[0].id.uuid === res.data.included[j].id.uuid){
+
             listing.imageUrl = res.data.included[j].attributes.variants["landscape-crop"].url;
           }
           if(listing.authorId === res.data.included[j].id.uuid){
             listing.auhorName = res.data.included[j].attributes.profile.displayName;
           }
         }
+
 
         data.push(listing);
 
@@ -94,23 +96,23 @@ class FeaturedListings extends Component{
       //force re-render
       this.setState({promiseIsResolved: true, data: data});
 
-
-
     });
   }
-
-
 
   render(){
     if(!this.state.promiseIsResolved){return null}
 
+
     return (
+
     <div >
       <div className={css.title}>
         <FormattedMessage id="Featured Listings" />
       </div>
       <div className={css.locations}>
+
         {locationLink(
+
           this.state.data[0].id,
           this.state.data[0].imageUrl,
           this.state.data[0].title,
@@ -145,8 +147,6 @@ const LazyImage = lazyLoadWithDimensions(LocationImage);
 const locationLink = (id, imageurl, name, authorName) => {
 
 
-
-
   const nameText = <span className={css.locationName}>{name}</span>;
   const slug = createSlug(name);
   return (
@@ -177,10 +177,12 @@ const locationLink = (id, imageurl, name, authorName) => {
 };
 
 const SectionFeaturedListings = props => {
-  const { rootClassName, className } = props;
-  const classes = classNames(rootClassName || css.root, className);
 
-  return (
+  const { rootClassName, className } = props;
+
+  const classes = classNames(rootClassName || css.root, className);
+  
+  return ( 
     <div className={classes}>
       <div className={css.title}>
         <FormattedMessage id="Featured Listings" />
@@ -220,3 +222,4 @@ SectionFeaturedListings.propTypes = {
 };
 
 export default FeaturedListings;
+

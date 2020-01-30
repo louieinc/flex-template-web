@@ -16,7 +16,7 @@ import {
     LayoutWrapperMain,
     LayoutWrapperFooter,
     Footer,
-    SectionFeaturedListings,
+    SectionFeaturedListings
 } from '../../components';
 import { TopbarContainer } from '../../containers';
 
@@ -34,6 +34,7 @@ export const LandingPageComponent = props => {
     const schemaTitle = intl.formatMessage({ id: 'LandingPage.schemaTitle' }, { siteTitle });
     const schemaDescription = intl.formatMessage({ id: 'LandingPage.schemaDescription' });
     const schemaImage = `${config.canonicalRootURL}${facebookImage}`;
+    
 
     return (
         <Page
@@ -71,7 +72,7 @@ export const LandingPageComponent = props => {
                         </li>
                         <li className={css.section}>
                             <div className={css.sectionContent}>
-                                <SectionLocations />
+                                <SectionLocations /> 
                             </div>
                         </li>
 
@@ -94,7 +95,7 @@ export const LandingPageComponent = props => {
                             </div>
                         </li>
                     </ul>
-
+                    
                 </LayoutWrapperMain>
                 <LayoutWrapperFooter>
                     <Footer />
