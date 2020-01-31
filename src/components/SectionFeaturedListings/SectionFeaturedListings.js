@@ -33,6 +33,7 @@ class FeaturedListings extends Component{
 
     sdk.listings.query({
       price: "1,16000",
+      meta_featured: "true",
       "include": [
         "author",
         "images"

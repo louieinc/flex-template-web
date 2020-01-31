@@ -682,6 +682,7 @@
   "ReviewModal.title": "Leave a review for {revieweeName}",
   "SearchFilters.amenitiesLabel": "Amenities",
   "SearchFilters.categoryLabel": "Category",
+  "SearchFilters.keywordLabel": "Keyword",
   "SearchFilters.filtersButtonLabel": "Filters",
   "SearchFilters.foundResults": "{count, number} {count, plural, one {result} other {results}}",
   "SearchFilters.loadingResults": "Loading search results…",
