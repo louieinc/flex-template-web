@@ -15,6 +15,8 @@ const SectionHeading = props => {
     hostLink,
     showContactUser,
     onContactUser,
+    weekPrice,
+    monthPrice,
   } = props;
 
   const unitType = config.bookingUnitType;
@@ -35,6 +37,8 @@ const SectionHeading = props => {
         </div>
         <div className={css.desktopPerUnit}>
           <FormattedMessage id={unitTranslationKey} />
+          {weekPrice}         
+          {monthPrice}
         </div>
       </div>
       <div className={css.heading}>

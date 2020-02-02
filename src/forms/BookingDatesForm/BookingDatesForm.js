@@ -46,7 +46,7 @@ export class BookingDatesFormComponent extends Component {
   }
 
   render() {
-    const { rootClassName, className, price: unitPrice, ...rest } = this.props;
+    const { rootClassName, className, price: unitPrice, weekPrice, monthPrice, ...rest } = this.props;
     const classes = classNames(rootClassName || css.root, className);
 
     if (!unitPrice) {
@@ -117,7 +117,8 @@ export class BookingDatesFormComponent extends Component {
                   unitPrice,
                   startDate,
                   endDate,
-
+                  weekPrice,
+                  monthPrice,
                   // NOTE: If unitType is `line-item/units`, a new picker
                   // for the quantity should be added to the form.
                   quantity: 1,
@@ -207,6 +208,8 @@ BookingDatesFormComponent.defaultProps = {
   startDatePlaceholder: null,
   endDatePlaceholder: null,
   timeSlots: null,
+  weekPrice: null,
+  monthPrice: null
 };
 
 BookingDatesFormComponent.propTypes = {
