@@ -294,6 +294,8 @@ export class TransactionPanelComponent extends Component {
       : 'TransactionPanel.perUnit';
 
     const price = currentListing.attributes.price;
+    const weekPrice = currentListing.attributes.week;
+    const monthPrice = currentListing.attributes.month;
     const bookingSubTitle = price
       ? `${formatMoney(intl, price)} ${intl.formatMessage({ id: unitTranslationKey })}`
       : '';

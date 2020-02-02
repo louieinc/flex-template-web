@@ -200,6 +200,7 @@ export class ListingPageComponent extends Component {
       isPendingApprovalVariant || isDraftVariant
         ? ensureOwnListing(getOwnListing(listingId))
         : ensureListing(getListing(listingId));
+console.log(currentListing);
 
     const listingSlug = rawParams.slug || createSlug(currentListing.attributes.title || '');
     const params = { slug: listingSlug, ...rawParams };
@@ -378,6 +379,20 @@ export class ListingPageComponent extends Component {
           <span className={css.separator}>•</span>
         </span>
       ) : null;
+      const weekPrice =
+      publicData && publicData.week ? (
+        <span>
+          <span className={css.separator}>•</span>
+          ${publicData.week}/week      
+        </span>
+      ) : null;
+      const monthPrice =
+      publicData && publicData.month ? (
+        <span>
+          <span className={css.separator}>•</span>
+          ${publicData.month}/month
+        </span>
+      ) : null;
 
     return (
       <Page
@@ -426,6 +441,8 @@ export class ListingPageComponent extends Component {
                     hostLink={hostLink}
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
+                    weekPrice={weekPrice}
+                    monthPrice={monthPrice}
                   />
                   <SectionBedsAvailableTonight timeSlots={timeSlots} />
                   <SectionDescriptionMaybe description={description} />
