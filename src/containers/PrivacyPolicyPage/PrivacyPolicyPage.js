@@ -23,7 +23,8 @@ const PrivacyPolicyPageComponent = props => {
   const { scrollingDisabled, intl } = props;
 
   const tabs = [
-    {
+
+{
       text: intl.formatMessage({ id: 'PrivacyPolicyPage.privacyTabTitle' }),
       selected: true,
       linkProps: {
@@ -44,6 +45,7 @@ const PrivacyPolicyPageComponent = props => {
         name: 'CommunityGuidePage',
       },
     },
+
   ];
   const siteTitle = config.siteTitle;
   const schemaTitle = intl.formatMessage({ id: 'PrivacyPolicyPage.schemaTitle' }, { siteTitle });

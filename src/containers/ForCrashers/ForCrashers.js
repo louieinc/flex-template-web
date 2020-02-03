@@ -6,9 +6,7 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
-  NamedLink,
-  ExternalLink,
-} from '../../components';
+ } from '../../components';
 
 import css from './ForCrashers.css';
 import image from './For-Crashers-Resized.jpg';
@@ -47,31 +45,30 @@ const ForCrashers = () => {
         </p>
 
         <p>
-          The first crash pad I ever booked in Denver was one headache after another. I had no idea where to start, so I just typed “crash pad Denver” into Google. I sorted through a long list of crash pads and started calling. Some were full, some were too far from the airport, and some had no transportation options (I didn’t have a car in Denver). When I finally found one that had a bed available, they asked me to send a picture of a paper check so they could use my routing and account number to automatically debit my bank for the rent every month. I remember thinking: <i>there has to be a better way</i>.
+          The first crash pad I ever booked in Denver was one headache after another. I had no idea where to start, so I just typed “crash pad Denver” into Google. I sorted through a long list of crash pads and started calling. Some were full, some were too far from the airport, and some had no transportation options (I didn’t have a car in Denver). When I finally found one that had a bed available, they asked me to send a picture of a paper check so they could use my routing and account number to automatically debit my bank for the rent every month. I remember thinking: <i>there has to be a better way</i>. <strong>There is a better way now, use FindaCrashPad.com to book your next stay!</strong>
         </p>
 
         <p>
-          <strong><u>Using FindaCrashPad.com</u></strong>
+          <b>FindaCrashPad.com</b> was built <i>by</i> crew members <i>for</i> crew members. Take a look at all the useful features that have been included to make booking a crash pad easy and worry free.
         </p>
-
-        <p>
-          FindaCrashPad.com was built <i>by</i> crew members <i>for</i> crew members. Using our site, you will be able to:
-        </p>
-
+	
+	<p><b>User Friendly Features:</b></p>
           <ul className={css.ulist}>
-
-          <li>Browse one of the largest online networks of crash pads across the U.S.</li>
-          <li>Filter your searches criteria to find exactly what you&rsquo;re looking for</li>
-          <li>See exactly where the crash pad is</li>
-          <li>Instantly check to see if the crash pad has a bed available</li>
-          <li>View multiple photos of the crash pad</li>
-          <li>Read verified reviews from other crew members who have stayed there</li>
-          <li>Securely pay your rent using one of the world&rsquo;s leading credit card processors</li>
-
+			
+			<p class="tab"><li>Browse one of the largest online networks of crash pads across the U.S.</li></p>
+          		<p class="tab"><li>Filter your searches criteria to find exactly what you&rsquo;re looking for</li></p>
+          		<p class="tab"><li>See exactly where the crash pad is</li></p>
+          		<p class="tab"><li>Instantly check to see if the crash pad has a bed available</li></p>
+          		<p class="tab"><li>View multiple photos of the crash pad</li></p>
+          		<p class="tab"><li>Read verified reviews from other crew members who have stayed there</li></p>
+          		<p class="tab"><li>Securely pay your rent using one of the world&rsquo;s leading credit card processors</li></p>
+		
+		
           </ul>
 
-            </div>
-
+      
+   
+	 </div>
 	 </div>
 
         </LayoutWrapperMain>

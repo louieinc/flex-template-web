@@ -12,34 +12,35 @@ import {
   LayoutWrapperSideNav,
   LayoutWrapperTopbar,
   LayoutWrapperFooter,
+  CancellationPolicy,
   Footer,
-  CommunityGuide,
 } from '../../components';
 import config from '../../config';
 
-import css from './CommunityGuidePage.css';
+import css from './CancellationPolicyPage.css';
 
-const CommunityGuidePageComponent = props => {
+const CancellationPolicyPageComponent = props => {
   const { scrollingDisabled, intl } = props;
 
   const tabs = [
-    {
-      text: intl.formatMessage({ id: 'CommunityGuidePage.privacyTabTitle' }),
-      selected: false,
+
+{
+      text: intl.formatMessage({ id: 'PrivacyPolicyPage.privacyTabTitle' }),
+      selected: true,
       linkProps: {
         name: 'PrivacyPolicyPage',
       },
     },
     {
-      text: intl.formatMessage({ id: 'CommunityGuidePage.tosTabTitle' }),
+      text: intl.formatMessage({ id: 'PrivacyPolicyPage.tosTabTitle' }),
       selected: false,
       linkProps: {
         name: 'TermsOfServicePage',
       },
     },
     {
-      text: intl.formatMessage({ id: 'CommunityGuidePage.cgTabTitle' }),
-      selected: true,
+      text: intl.formatMessage({ id: 'PrivacyPolicyPage.cgTabTitle' }),
+      selected: false,
       linkProps: {
         name: 'CommunityGuidePage',
       },
@@ -47,7 +48,7 @@ const CommunityGuidePageComponent = props => {
 
   ];
   const siteTitle = config.siteTitle;
-  const schemaTitle = intl.formatMessage({ id: 'CommunityGuide.schemaTitle' }, { siteTitle });
+  const schemaTitle = intl.formatMessage({ id: 'CancellationPolicyPage.schemaTitle' }, { siteTitle });
   const schema = {
     '@context': 'http://schema.org',
     '@type': 'WebPage',
@@ -57,15 +58,15 @@ const CommunityGuidePageComponent = props => {
     <Page title={schemaTitle} scrollingDisabled={scrollingDisabled} schema={schema}>
       <LayoutSideNavigation>
         <LayoutWrapperTopbar>
-          <TopbarContainer currentPage="CommunityGuidePage" />
+          <TopbarContainer currentPage="CancellationPolicy" />
         </LayoutWrapperTopbar>
         <LayoutWrapperSideNav tabs={tabs} />
         <LayoutWrapperMain>
           <div className={css.content}>
             <h1 className={css.heading}>
-              <FormattedMessage id="CommunityGuidePage.heading" />
+              <FormattedMessage id="CancellationPolicy.heading" />
             </h1>
-            <CommunityGuide />
+            <CancellationPolicy />
           </div>
         </LayoutWrapperMain>
         <LayoutWrapperFooter>
@@ -78,7 +79,7 @@ const CommunityGuidePageComponent = props => {
 
 const { bool } = PropTypes;
 
-CommunityGuidePageComponent.propTypes = {
+CancellationPolicyPageComponent.propTypes = {
   scrollingDisabled: bool.isRequired,
 
   // from injectIntl
@@ -91,9 +92,9 @@ const mapStateToProps = state => {
   };
 };
 
-const CommunityGuidePage = compose(
+const CancellationPolicyPage = compose(
   connect(mapStateToProps),
   injectIntl
-)(CommunityGuidePageComponent);
+)(CancellationPolicyPageComponent);
 
-export default CommunityGuidePage;
+export default CancellationPolicyPage;

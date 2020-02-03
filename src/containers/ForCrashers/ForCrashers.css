@@ -56,6 +56,42 @@
   margin-bottom: 24px;
 }
 
-.ulist {
-  list-style-type: circle;
+.ulist {list-style-type: none}
+
+.tab { margin-left: 40px; }
+
+li{
+    margin-left:50px;
+}
+
+li::before {content: "•"; color: black;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
+
+@import '../../marketplace.css';
+
+.buttonLink {
+  @apply --marketplaceButtonStyles;
+}
+
+.buttonLinkPrimary {
+  @apply --marketplaceButtonStylesPrimary;
+}
+
+.buttonLinkSecondary {
+  @apply --marketplaceButtonStylesSecondary;
+}
+
+.customButton {
+  @apply --marketplaceButtonStyles;
+  padding: 0;
+  border-radius: 8px;
+  height: 100px;
+}
+
+.customIcon {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
+  margin-right: 10px;
 }

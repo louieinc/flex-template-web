@@ -50,14 +50,14 @@ const ForOwners = () => {
               </p>
 
               <p>
-                <strong><u>The Breakdown</u></strong>
+                <h3><b>The Breakdown</b></h3>
               </p>
 
               <p>
                 As a crash pad owner, you care about two things:
               </p>
 
-                <ol>
+                <ul>
                   <li>
                   Providing your crew members a safe, quiet place to rest before and after their trips.
                   </li>
@@ -65,7 +65,7 @@ const ForOwners = () => {
                   <li>
                   Filling beds.
                   </li>
-                </ol>
+                </ul>
 
               <p>
                 Vacancy costs you money. The beds in your crash pad are a perishable product, just like airline seats. If a plane pushes back from the gate with open seats, the airline loses that revenue. Every month one of your beds goes vacant is lost revenue you will never get back.
@@ -76,14 +76,14 @@ const ForOwners = () => {
               </p>
 
               <p>
-                <strong><u>Put Your Crash Pad on Autopilot</u></strong>
+                <h3><b>Put Your Crash Pad on Autopilot</b></h3>
               </p>
 
               <p>
                 If you want to run your crash pad like a business, you need to set yourself up for success. That means having the right tools and the right systems in place. Every time you have to contact a crewmember it costs time or money. Ask yourself:
               </p>
 
-                <ul className={css.ulist}>
+                <ul>
 
                 <li>How often do you take phone calls from crewmembers just to see if your crash pad has a bed available?</li>
                 <li>How much time do you spend finding crewmembers to boost your occupancy?</li>
@@ -96,7 +96,7 @@ const ForOwners = () => {
                 If you aren&rsquo;t taking these calls yourself then you are paying someone to do it for you. When you list on Find a Crash Pad, you can take advantage of a wide range of tools which will allow you to:
               </p>
 
-                <ul className={css.ulist}>
+                <ul>
 
                 <li>List your crash pad for free</li>
                 <li>Gain access to the largest online crash pad marketplace that allows pilots and flight attendants to browse crash pads for free</li>
@@ -111,6 +111,8 @@ const ForOwners = () => {
               <p>
                 Find a Crash Pad will save you time and money, so you can get back to doing the things you love. Click <strong><u><a href="/l/new">here</a></u></strong> to list your crash pad.
               </p>
+
+ 
 
           </div>
 	 </div>
