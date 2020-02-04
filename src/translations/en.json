@@ -922,5 +922,7 @@
   "UserCard.showFullBioLink": "more",
   "UserCard.viewProfileLink": "View profile",
   "UserDisplayName.banned": "Banned user",
-  "UserDisplayName.deleted": "Deleted user"
+  "UserDisplayName.deleted": "Deleted user",
+  "FeesExplained.heading": "Fees Explained",
+  "CancellationPolicy.heading": "Cancellation Policy"
 }

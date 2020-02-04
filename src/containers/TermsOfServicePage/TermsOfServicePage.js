@@ -44,6 +44,22 @@ const TermsOfServicePageComponent = props => {
         name: 'CommunityGuidePage',
       },
     },
+	
+		   {
+      text:'Fees Explained', 
+      selected: false,
+      linkProps: {
+        name: 'FeesExplained',
+      },
+    },
+
+{
+      text:'Cancellation Policy',
+      selected: false,
+      linkProps: {
+        name: 'CancellationPolicy',
+      },
+    }
   ];
   const siteTitle = config.siteTitle;
   const schemaTitle = intl.formatMessage({ id: 'TermsOfServicePage.schemaTitle' }, { siteTitle });

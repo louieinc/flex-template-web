@@ -151,6 +151,8 @@ export { default as LayoutWrapperAccountSettingsSideNav } from './LayoutWrapperA
 export { default as ModalMissingInformation } from './ModalMissingInformation/ModalMissingInformation';
 export { default as ReviewModal } from './ReviewModal/ReviewModal';
 export { default as PrivacyPolicy } from './PrivacyPolicy/PrivacyPolicy';
+export { default as FeesExplained } from './FeesExplained/FeesExplained';
+export { default as CancellationPolicy } from './CancellationPolicy/CancellationPolicy';
 export { default as TermsOfService } from './TermsOfService/TermsOfService';
 export { default as CommunityGuide } from './CommunityGuide/CommunityGuide';
 export { default as EditListingAvailabilityPanel } from './EditListingAvailabilityPanel/EditListingAvailabilityPanel';

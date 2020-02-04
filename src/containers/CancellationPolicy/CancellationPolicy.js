@@ -17,16 +17,16 @@ import {
 } from '../../components';
 import config from '../../config';
 
-import css from './CancellationPolicyPage.css';
+import css from './CancellationPolicy.css';
 
-const CancellationPolicyPageComponent = props => {
+const CancellationPolicyComponent = props => {
   const { scrollingDisabled, intl } = props;
 
   const tabs = [
 
 {
       text: intl.formatMessage({ id: 'PrivacyPolicyPage.privacyTabTitle' }),
-      selected: true,
+      selected: false,
       linkProps: {
         name: 'PrivacyPolicyPage',
       },
@@ -45,10 +45,26 @@ const CancellationPolicyPageComponent = props => {
         name: 'CommunityGuidePage',
       },
     },
+	
+	{
+      text:'Fees Explained',
+      selected: false,
+      linkProps: {
+        name: 'FeesExplained',
+      },
+    },
+	
+	{
+      text:'Cancellation Policy',
+      selected: true,
+      linkProps: {
+        name: 'CancellationPolicy',
+      },
+    }
 
   ];
   const siteTitle = config.siteTitle;
-  const schemaTitle = intl.formatMessage({ id: 'CancellationPolicyPage.schemaTitle' }, { siteTitle });
+  const schemaTitle = intl.formatMessage({ id: 'CancellationPolicy.schemaTitle' }, { siteTitle });
   const schema = {
     '@context': 'http://schema.org',
     '@type': 'WebPage',
@@ -79,7 +95,7 @@ const CancellationPolicyPageComponent = props => {
 
 const { bool } = PropTypes;
 
-CancellationPolicyPageComponent.propTypes = {
+CancellationPolicyComponent.propTypes = {
   scrollingDisabled: bool.isRequired,
 
   // from injectIntl
@@ -95,6 +111,6 @@ const mapStateToProps = state => {
 const CancellationPolicyPage = compose(
   connect(mapStateToProps),
   injectIntl
-)(CancellationPolicyPageComponent);
+)(CancellationPolicyComponent);
 
 export default CancellationPolicyPage;

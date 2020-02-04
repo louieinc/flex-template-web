@@ -33,7 +33,7 @@ const FeesExplainedPageComponent = props => {
     },
     {
       text: intl.formatMessage({ id: 'TermsOfServicePage.tosTabTitle' }),
-      selected: true,
+      selected: false,
       linkProps: {
         name: 'TermsOfServicePage',
       },
@@ -45,6 +45,22 @@ const FeesExplainedPageComponent = props => {
         name: 'CommunityGuidePage',
       },
     },
+	   {
+      text:'Fees Explained', 
+      selected: true,
+      linkProps: {
+        name: 'FeesExplained',
+      },
+    },
+	
+	{
+      text:'Cancellation Policy',
+      selected: false,
+      linkProps: {
+        name: 'CancellationPolicy',
+      },
+    }
+	
   ];
   const siteTitle = config.siteTitle;
   const schemaTitle = intl.formatMessage({ id: 'FeesExplained.schemaTitle' }, { siteTitle });
