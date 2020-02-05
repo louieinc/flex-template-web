@@ -107,12 +107,16 @@ const EditListingWizardTab = props => {
   };
 
   const onCompleteEditListingWizardTab = (tab, updateValues) => {
+    if(updateValues.publicData && updateValues.publicData.weekPrice)
+      updateValues.publicData.weekPrice = updateValues.publicData.weekPrice.amount/100;
+    if(updateValues.publicData && updateValues.publicData.monthPrice)
+      updateValues.publicData.monthPrice = updateValues.publicData.monthPrice.amount/100;
     // Normalize images for API call
     const { images: updatedImages, ...otherValues } = updateValues;
     const imageProperty =
       typeof updatedImages !== 'undefined' ? { images: imageIds(updatedImages) } : {};
     const updateValuesWithImages = { ...otherValues, ...imageProperty };
-
+console.log(updateValues);
     if (isNewListingFlow) {
       const onUpsertListingDraft = isNewURI
         ? (tab, updateValues) => onCreateListingDraft(updateValues)

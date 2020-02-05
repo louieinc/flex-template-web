@@ -61,12 +61,12 @@ const estimatedTransaction = (unitType, bookingStart, bookingEnd, unitPrice, qua
     : isDaily
     ? daysBetween(bookingStart, bookingEnd)
     : quantity;
-console.log(Math.floor(weekPrice/7) + '00');
+
   if(weekPrice != null && unitCount >= 7){
-    unitPrice.amount = Math.floor(weekPrice/7) + '00';
+    unitPrice.amount = Math.floor(weekPrice/7);
   }
   if(monthPrice != null && unitCount >= 30){
-    unitPrice.amount = Math.floor(monthPrice/30) + '00';
+    unitPrice.amount = Math.floor(monthPrice/30);
   }
 
   const totalPrice = estimatedTotalPrice(unitPrice, unitCount);

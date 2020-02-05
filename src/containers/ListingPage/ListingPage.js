@@ -380,17 +380,17 @@ console.log(currentListing);
         </span>
       ) : null;
       const weekPrice =
-      publicData && publicData.week ? (
+      publicData && publicData.weekPrice ? (
         <span>
           <span className={css.separator}>•</span>
-          ${publicData.week}/week      
+          ${publicData.weekPrice}/week      
         </span>
       ) : null;
       const monthPrice =
-      publicData && publicData.month ? (
+      publicData && publicData.monthPrice ? (
         <span>
           <span className={css.separator}>•</span>
-          ${publicData.month}/month
+          ${publicData.monthPrice}/month
         </span>
       ) : null;
 
