@@ -39,9 +39,10 @@ import css from './BookingDatesForm.css';
 
 const { Money, UUID } = sdkTypes;
 
-const estimatedTotalPrice = (unitPrice, unitCount) => {
+const estimatedTotalPrice = (unitPrice, unitCount) => {  
   const numericPrice = convertMoneyToNumber(unitPrice);
   const numericTotalPrice = new Decimal(numericPrice).times(unitCount).toNumber();
+  
   return new Money(
     convertUnitToSubUnit(numericTotalPrice, unitDivisor(unitPrice.currency)),
     unitPrice.currency
@@ -51,7 +52,7 @@ const estimatedTotalPrice = (unitPrice, unitCount) => {
 // When we cannot speculatively initiate a transaction (i.e. logged
 // out), we must estimate the booking breakdown. This function creates
 // an estimated transaction object for that use case.
-const estimatedTransaction = (unitType, bookingStart, bookingEnd, unitPrice, quantity,  weekPrice, monthPrice) => {
+const estimatedTransaction = (unitType, bookingStart, bookingEnd, unitPrice, quantity,  weekPrice, monthPrice, originalPrice) => {
   const now = new Date();
   const isNightly = unitType === LINE_ITEM_NIGHT;
   const isDaily = unitType === LINE_ITEM_DAY;
@@ -62,6 +63,8 @@ const estimatedTransaction = (unitType, bookingStart, bookingEnd, unitPrice, qua
     ? daysBetween(bookingStart, bookingEnd)
     : quantity;
 
+console.log(originalPrice);
+  unitPrice.amount = originalPrice;
   if(weekPrice != null && unitCount >= 7){
     unitPrice.amount = Math.floor(weekPrice/7);
   }
@@ -126,7 +129,7 @@ const estimatedTransaction = (unitType, bookingStart, bookingEnd, unitPrice, qua
 };
 
 const EstimatedBreakdownMaybe = props => {
-  const { unitType, unitPrice, startDate, endDate, quantity, weekPrice, monthPrice } = props.bookingData;
+  const { unitType, unitPrice, startDate, endDate, quantity, weekPrice, monthPrice, originalPrice } = props.bookingData;
   const isUnits = unitType === LINE_ITEM_UNITS;
   const quantityIfUsingUnits = !isUnits || Number.isInteger(quantity);
   const canEstimatePrice = startDate && endDate && unitPrice && quantityIfUsingUnits;
@@ -135,7 +138,7 @@ const EstimatedBreakdownMaybe = props => {
     return null;
   }
 
-  const tx = estimatedTransaction(unitType, startDate, endDate, unitPrice, quantity, weekPrice, monthPrice);
+  const tx = estimatedTransaction(unitType, startDate, endDate, unitPrice, quantity, weekPrice, monthPrice, originalPrice);
 
   return (
     <BookingBreakdown

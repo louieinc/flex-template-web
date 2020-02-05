@@ -69,6 +69,7 @@ const BookingPanel = props => {
   } = props;
 
   const price = listing.attributes.price;
+  const originalPrice = JSON.parse(JSON.stringify(listing.attributes.price.amount));
   const weekPrice = listing.attributes.publicData.weekPrice ? listing.attributes.publicData.weekPrice * 100 : null;
   const monthPrice = listing.attributes.publicData.monthPrice ? listing.attributes.publicData.monthPrice * 100 : null;  
 
@@ -130,6 +131,7 @@ const BookingPanel = props => {
             fetchTimeSlotsError={fetchTimeSlotsError}
             weekPrice = {weekPrice}
             monthPrice = {monthPrice}
+            originalPrice = {originalPrice}
           />
         ) : null}
       </ModalInMobile>
