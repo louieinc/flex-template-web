@@ -9,7 +9,7 @@ import { LINE_ITEM_NIGHT, LINE_ITEM_DAY, propTypes } from '../../util/types';
 import * as validators from '../../util/validators';
 import { formatMoney } from '../../util/currency';
 import { types as sdkTypes } from '../../util/sdkLoader';
-import { Button, Form, FieldCurrencyInput } from '../../components';
+import { Button, Form, FieldCurrencyInput, FieldTextInput } from '../../components';
 import css from './EditListingPricingForm.css';
 
 const { Money } = sdkTypes;
@@ -98,7 +98,24 @@ export const EditListingPricingFormComponent = props => (
             currencyConfig={config.currencyConfig}
             validate={priceValidators}
           />
-
+          <FieldCurrencyInput
+            id="week"
+            name="publicData.weekPrice"
+            className={css.priceInput}            
+            label="Price per week in USD (optional)"
+            placeholder="Choose your weekly price"
+            currencyConfig={config.currencyConfig}
+            //validate={priceValidators}
+          />
+          <FieldCurrencyInput
+            id="month"
+            name="publicData.monthPrice"
+            className={css.priceInput}            
+            label="Price per month in USD (optional)"
+            placeholder="Choose your monthly price"
+            currencyConfig={config.currencyConfig}
+            //validate={priceValidators}
+          />
           <Button
             className={css.submitButton}
             type="submit"

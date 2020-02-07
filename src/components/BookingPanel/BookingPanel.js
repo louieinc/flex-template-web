@@ -69,9 +69,10 @@ const BookingPanel = props => {
   } = props;
 
   const price = listing.attributes.price;
-  const weekPrice = listing.attributes.publicData.week ? listing.attributes.publicData.week : null;
-  const monthPrice = listing.attributes.publicData.month ? listing.attributes.publicData.month : null;  
-  
+  const originalPrice = JSON.parse(JSON.stringify(listing.attributes.price.amount));
+  const weekPrice = listing.attributes.publicData.weekPrice ? listing.attributes.publicData.weekPrice * 100 : null;
+  const monthPrice = listing.attributes.publicData.monthPrice ? listing.attributes.publicData.monthPrice * 100 : null;  
+
   const hasListingState = !!listing.attributes.state;
   const isClosed = hasListingState && listing.attributes.state === LISTING_STATE_CLOSED;
   const showBookingDatesForm = hasListingState && !isClosed;
@@ -130,6 +131,7 @@ const BookingPanel = props => {
             fetchTimeSlotsError={fetchTimeSlotsError}
             weekPrice = {weekPrice}
             monthPrice = {monthPrice}
+            originalPrice = {originalPrice}
           />
         ) : null}
       </ModalInMobile>
