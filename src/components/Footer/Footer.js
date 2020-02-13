@@ -80,8 +80,7 @@ const Footer = props => {
               </div>
             </div>
 
-    
-            <div className={css.extraLinks}>
+			  <div className={css.extraLinks}>
 
               <div className={css.legalMatters}>
                 <div className={css.tosAndPrivacy}>
@@ -95,19 +94,41 @@ const Footer = props => {
                     <FormattedMessage id="Footer.toAboutPage" />
                   </NamedLink></p>
 				  
-                  <p><NamedLink name="CommunityGuidePage" className={css.legalLink}>
-                    <FormattedMessage id="Footer.CommunityGuide" />
-                  </NamedLink></p>
-                  
-                  
-                    <p><NamedLink name="TermsOfServicePage" className={css.legalLink}>
-                      <FormattedMessage id="Footer.termsOfUse" />
-                    </NamedLink></p>
                 
-                    <p><NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
+                  
+                  
+                    
+               
+               
+               </div>
+            </div>
+          </div>
+			
+	
+            <div className={css.extraLinks}>
+
+              <div className={css.legalMatters}>
+                <div className={css.tosAndPrivacy}>
+                  
+				    <p><NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
                       <FormattedMessage id="Footer.privacyPolicy" />
                     </NamedLink></p>
-               
+				  
+				     <p><NamedLink name="TermsOfServicePage" className={css.legalLink}>
+                      <FormattedMessage id="Footer.termsOfUse" />
+                    </NamedLink></p>
+					
+					<p><NamedLink name="CommunityGuidePage" className={css.legalLink}>
+                    <FormattedMessage id="Footer.CommunityGuide" />
+                  </NamedLink></p>
+				  
+				 	<p><NamedLink name="FeesExplained" className={css.legalLink}>
+                    <FormattedMessage id="Fees Explained" />
+                  </NamedLink></p> 
+                
+                    <p><NamedLink name="CancellationPolicy" className={css.legalLink}>
+                    <FormattedMessage id="Cancellation Policy" />
+                  </NamedLink></p>             
                
                </div>
             </div>

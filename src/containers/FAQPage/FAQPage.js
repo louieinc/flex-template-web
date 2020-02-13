@@ -8,10 +8,10 @@ import {
   Footer,
  } from '../../components';
 
-import css from './ForCrashers.css';
-import image from './For-Crashers-Resized.jpg';
+import css from './FAQPage.css';
 
-const ForCrashers = () => {
+
+const FAQPage = () => {
   // prettier-ignore
   return (
     <StaticPage
@@ -30,7 +30,7 @@ const ForCrashers = () => {
 
           <LayoutWrapperMain className={css.staticPageWrapper}>
            <h1 className={css.pageTitle}>It's been a hard day, finding a place to sleep shouldn't be. </h1>
-          <img className={css.coverImage} src={image} alt="Relaxing at my Crash Pad." />
+         
 
            <div className={css.contentWrapper}>
 
@@ -82,4 +82,4 @@ const ForCrashers = () => {
   );
 };
 
-export default ForCrashers;
+export default FAQPage;

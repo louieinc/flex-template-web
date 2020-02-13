@@ -62,11 +62,3 @@
 
 .tab { margin-left: 40px; }
 
-li{
-    margin-left:50px;
-	margin:1em 0;
-}
-
-li::before {content: "•"; color: black;
-  display: inline-block; width: 1em;
-  margin-left: -1em}

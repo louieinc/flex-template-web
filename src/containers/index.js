@@ -29,3 +29,4 @@ export { default as ContactUs } from './ContactUs/ContactUs';
 export { default as CommunityGuidePage } from './CommunityGuidePage/CommunityGuidePage';
 export { default as FeesExplained } from './FeesExplained/FeesExplained';
 export { default as CancellationPolicy } from './CancellationPolicy/CancellationPolicy';
+export { default as FAQPage } from './FAQPage/FAQPage';
