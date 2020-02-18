@@ -58,16 +58,18 @@
 
 .ulist {list-style-type: none}
 
-.tab { margin-left:100px; }
+.tab { margin-left:25px; }
 
+.bullet {list-style: disc;}
 
 ul  {
   list-style: round ;
 }
+/*
 li::before {content: "•"; color: black;
   display: inline-block; width: 1em;
   margin-left: 0em}
-
+*/
 @import '../../marketplace.css';
 
 .buttonLink {

@@ -56,13 +56,13 @@ const ForCrashers = () => {
         <ul >
 		 
 			
-			    <p class="tab"><li>Browse one of the largest online networks of crash pads across the U.S.</li></p>
-      		<p class="tab"><li>Filter your searches criteria to find exactly what you&rsquo;re looking for</li></p>
-      		<p class="tab"><li>See exactly where the crash pad is</li></p>
-      		<p class="tab"><li>Instantly check to see if the crash pad has a bed available</li></p>
-      		<p class="tab"><li>View multiple photos of the crash pad</li></p>
-      		<p class="tab"><li>Read verified reviews from other crew members who have stayed there</li></p>
-          <p class="tab"><li>Securely pay your rent using one of the world&rsquo;s leading credit card processors</li></p>
+			    <p className={css.tab}><li className={css.bullet}>Browse one of the largest online networks of crash pads across the U.S.</li></p>
+      		<p className={css.tab}><li className={css.bullet}>Filter your searches criteria to find exactly what you&rsquo;re looking for</li></p>
+      		<p className={css.tab}><li className={css.bullet}>See exactly where the crash pad is</li></p>
+      		<p className={css.tab}><li className={css.bullet}>Instantly check to see if the crash pad has a bed available</li></p>
+      		<p className={css.tab}><li className={css.bullet}>View multiple photos of the crash pad</li></p>
+      		<p className={css.tab}><li className={css.bullet}>Read verified reviews from other crew members who have stayed there</li></p>
+          <p className={css.tab}><li className={css.bullet}>Securely pay your rent using one of the world&rsquo;s leading credit card processors</li></p>
 		
 		
         </ul>
