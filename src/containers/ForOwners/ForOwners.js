@@ -58,11 +58,11 @@ const ForOwners = () => {
               </p>
 
                 <ul>
-                  <li>
+                  <li className={css.bullet}>
                   Providing your crew members a safe, quiet place to rest before and after their trips.
                   </li>
 
-                  <li>
+                  <li className={css.bullet}>
                   Filling beds.
                   </li>
                 </ul>
@@ -85,10 +85,10 @@ const ForOwners = () => {
 
                 <ul>
 
-                <li>How often do you take phone calls from crewmembers just to see if your crash pad has a bed available?</li>
-                <li>How much time do you spend finding crewmembers to boost your occupancy?</li>
-                <li>How much time do you spend requesting or collecting payment from your tenants?</li>
-                <li>How often do you take phone calls from crewmembers to give them directions to your crash pad? Or to tell them a door code? Or to remind them when rent is due?</li>
+                <li className={css.bullet}>How often do you take phone calls from crewmembers just to see if your crash pad has a bed available?</li>
+                <li className={css.bullet}>How much time do you spend finding crewmembers to boost your occupancy?</li>
+                <li className={css.bullet}>How much time do you spend requesting or collecting payment from your tenants?</li>
+                <li className={css.bullet}>How often do you take phone calls from crewmembers to give them directions to your crash pad? Or to tell them a door code? Or to remind them when rent is due?</li>
 
                 </ul>
 
@@ -98,13 +98,13 @@ const ForOwners = () => {
 
                 <ul>
 
-                <li>List your crash pad for free</li>
-                <li>Gain access to the largest online crash pad marketplace that allows pilots and flight attendants to browse crash pads for free</li>
-                <li>Quickly mark beds in your crash pad as available or unavailable</li>
-                <li>Book tenants through the website for time periods you designate in advance</li>
-                <li>Reduce vacancy, boost occupancy, and maximize profit</li>
-                <li>Accept rent via credit card using a secure, encrypted processing platform</li>
-                <li>Send an automated list of instruction, rules, and FAQs for your crash pad to the tenant after they book</li>
+                <li className={css.bullet}>List your crash pad for free</li>
+                <li className={css.bullet}>Gain access to the largest online crash pad marketplace that allows pilots and flight attendants to browse crash pads for free</li>
+                <li className={css.bullet}>Quickly mark beds in your crash pad as available or unavailable</li>
+                <li className={css.bullet}>Book tenants through the website for time periods you designate in advance</li>
+                <li className={css.bullet}>Reduce vacancy, boost occupancy, and maximize profit</li>
+                <li className={css.bullet}>Accept rent via credit card using a secure, encrypted processing platform</li>
+                <li className={css.bullet}>Send an automated list of instruction, rules, and FAQs for your crash pad to the tenant after they book</li>
 
                 </ul>
 
