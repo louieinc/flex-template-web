@@ -52,20 +52,20 @@ const ForCrashers = () => {
           <b>FindaCrashPad.com</b> was built <i>by</i> crew members <i>for</i> crew members. Take a look at all the useful features that have been included to make booking a crash pad easy and worry free.
         </p> 
 	
-	<p><b>User Friendly Features:</b></p>
-          <ul className={css.listorder}>
+  	    <p><b>User Friendly Features:</b></p>
+        <ul >
 		 
 			
-			<p class="tab"><li classname={css.listorder}>Browse one of the largest online networks of crash pads across the U.S.</li></p>
-          		<p class="tab"><li>Filter your searches criteria to find exactly what you&rsquo;re looking for</li></p>
-          		<p class="tab"><li>See exactly where the crash pad is</li></p>
-          		<p class="tab"><li>Instantly check to see if the crash pad has a bed available</li></p>
-          		<p class="tab"><li>View multiple photos of the crash pad</li></p>
-          		<p class="tab"><li>Read verified reviews from other crew members who have stayed there</li></p>
-          		<p class="tab"><li>Securely pay your rent using one of the world&rsquo;s leading credit card processors</li></p>
+			    <p class="tab"><li>Browse one of the largest online networks of crash pads across the U.S.</li></p>
+      		<p class="tab"><li>Filter your searches criteria to find exactly what you&rsquo;re looking for</li></p>
+      		<p class="tab"><li>See exactly where the crash pad is</li></p>
+      		<p class="tab"><li>Instantly check to see if the crash pad has a bed available</li></p>
+      		<p class="tab"><li>View multiple photos of the crash pad</li></p>
+      		<p class="tab"><li>Read verified reviews from other crew members who have stayed there</li></p>
+          <p class="tab"><li>Securely pay your rent using one of the world&rsquo;s leading credit card processors</li></p>
 		
 		
-          </ul>
+        </ul>
 
       
    

@@ -45,9 +45,9 @@ We may collect and use personal information that you provide directly to us. The
 When you access or use our Services, we automatically collect personal information and other information that may include:
 <ul>
 
-<li><b>Log Information:</b> We log personal information during use of our Services, including browser information, page views, IP addresses, and the website visited before navigating to our website to help us to improve our website and Services.</li>
+<li>Log Information<p className={css.tab}> We log personal information during use of our Services, including browser information, page views, IP addresses, and the website visited before navigating to our website to help us to improve our website and Services.</p></li>
 
-<li><b>Information Collected by Cookies and Other Tracking Technologies:</b> we may use various technologies to collect information, including cookies. Cookies are small data files stored in device memory that help us to improve our users’ experience of our website and Services, identify popular features, and count visits. We may also collect information using web beacons (also known as “tracking pixels”). Web beacons are electronic images that may be used in our Services or emails to help deliver cookies, count visits, understand usage, and campaign effectiveness and determine whether an email has been opened and acted upon. If your browser is set not to accept cookies, you may not be able to use the website or Services.</li>
+<li>Information Collected by Cookies and Other Tracking Technologies <p className={css.tab}>We may use various technologies to collect information, including cookies. Cookies are small data files stored in device memory that help us to improve our users’ experience of our website and Services, identify popular features, and count visits. We may also collect information using web beacons (also known as “tracking pixels”). Web beacons are electronic images that may be used in our Services or emails to help deliver cookies, count visits, understand usage, and campaign effectiveness and determine whether an email has been opened and acted upon. If your browser is set not to accept cookies, you may not be able to use the website or Services.</p></li>
 </ul>
 </p>
 
@@ -58,19 +58,19 @@ We may also obtain information from other sources and combine that with the info
 </p>
 
       <h2>Use of Information</h2>
-      <p>
+      <p >
      We may use personal information for various purposes, including to do the following:
-<ul>
-<li>Provide and deliver the Services, process transactions, and send you Service-related information, including confirmations and invoices;</li>
-<li>Send you technical notices, updates, security alerts, support messages, and administrative messages;</li>
-<li>Respond to your comments, questions, and requests, and provide customer service;</li>
-<li>Provide, maintain, advertise, promote and improve our Services;</li>
-<li>Facilitate communication among users of our Services;</li>
-<li>Communicate with you about products, services, offers, promotions, and more about FCP and others;</li>
-<li>Monitor and analyze trends, usage, and activities in connection with our Services;</li>
-<li>Personalize and improve our Services and provide content or features through the Service that match user profiles or interests;</li>
-<li>Link or combine with information we get from others to help understand your needs and provide you with better service; and</li>
-<li>Carry out any other purpose for which the information was collected.</li>
+<ul >
+<li className={css.smallBullet}>Provide and deliver the Services, process transactions, and send you Service-related information, including confirmations and invoices;</li>
+<li className={css.smallBullet}>Send you technical notices, updates, security alerts, support messages, and administrative messages;</li>
+<li className={css.smallBullet}>Respond to your comments, questions, and requests, and provide customer service;</li>
+<li className={css.smallBullet}>Provide, maintain, advertise, promote and improve our Services;</li>
+<li className={css.smallBullet}>Facilitate communication among users of our Services;</li>
+<li className={css.smallBullet}>Communicate with you about products, services, offers, promotions, and more about FCP and others;</li>
+<li className={css.smallBullet}>Monitor and analyze trends, usage, and activities in connection with our Services;</li>
+<li className={css.smallBullet}>Personalize and improve our Services and provide content or features through the Service that match user profiles or interests;</li>
+<li className={css.smallBullet}>Link or combine with information we get from others to help understand your needs and provide you with better service; and</li>
+<li className={css.smallBullet}>Carry out any other purpose for which the information was collected.</li>
 </ul>
 </p>
 
@@ -83,11 +83,11 @@ FCP is based in the United States, and the information we collect is governed by
 <p>
 We may share personal information as follows or as otherwise described in this Privacy Policy:
 <ul>
-<li>With vendors, consultants, and other service providers who need access to such information to carry out work on our behalf as requested through the Services;</li>
-<li>With third parties to provide marketing and promotional purposes on our behalf, provided that they have agreed to handle personal information in a manner consistent with this Privacy Policy;</li>
-<li>In response to a request for information, if we believe disclosure is required by applicable law, regulation, or rule; or administrative, judicial, or other government order;</li>
-<li>In connection with, or during negotiations of, any merger, sale of company assets, financing or acquisition of all or a portion of our business to another company; and</li>
-<li>Anonymized, Pseudonymized, and Aggregated Data
+<li className={css.smallBullet}>With vendors, consultants, and other service providers who need access to such information to carry out work on our behalf as requested through the Services;</li>
+<li className={css.smallBullet}>With third parties to provide marketing and promotional purposes on our behalf, provided that they have agreed to handle personal information in a manner consistent with this Privacy Policy;</li>
+<li className={css.smallBullet}>In response to a request for information, if we believe disclosure is required by applicable law, regulation, or rule; or administrative, judicial, or other government order;</li>
+<li className={css.smallBullet}>In connection with, or during negotiations of, any merger, sale of company assets, financing or acquisition of all or a portion of our business to another company; and</li>
+<li className={css.smallBullet}>Anonymized, Pseudonymized, and Aggregated Data
 We may also anonymize or pseudonymize to remove any identifying attributes, or aggregate personal information with a sufficiently large number of other information such that it cannot reasonably be linked to you (“anonymized data”). We may use this anonymized data for both internal or public analyses or reporting, but will not identify you in the anonymized data without your consent.</li>
 </ul>
 </p>

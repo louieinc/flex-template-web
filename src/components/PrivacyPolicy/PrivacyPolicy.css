@@ -23,4 +23,9 @@
       margin-bottom: 54px;
     }
   }
+
+ 
+ & .tab { margin-left:20px; }
+ & .smallBullet { font-size:16px; }
 }
+

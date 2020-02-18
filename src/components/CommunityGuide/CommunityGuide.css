@@ -23,4 +23,5 @@
       margin-bottom: 54px;
     }
   }
+  & .smallBullet { font-size:16px; }
 }
