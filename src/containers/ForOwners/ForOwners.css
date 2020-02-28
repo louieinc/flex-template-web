@@ -62,3 +62,9 @@
 
 .tab { margin-left: 40px; }
 
+  
+.bullet {
+  list-style: disc;
+  margin-left: 23px;
+}
+
