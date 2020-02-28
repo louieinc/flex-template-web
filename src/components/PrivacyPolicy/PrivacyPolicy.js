@@ -44,7 +44,7 @@ We may collect and use personal information that you provide directly to us. The
 <p>
 When you access or use our Services, we automatically collect personal information and other information that may include:
 
-
+<ul>
 <li className={css.smallBullet}>Log Information<p className={css.tab}> We log personal information during use of our Services, including browser information, page views, IP addresses, and the website visited before navigating to our website to help us to improve our website and Services.</p></li>
 
 <li className={css.smallBullet}>Information Collected by Cookies and Other Tracking Technologies <p className={css.tab}>We may use various technologies to collect information, including cookies. Cookies are small data files stored in device memory that help us to improve our users’ experience of our website and Services, identify popular features, and count visits. We may also collect information using web beacons (also known as “tracking pixels”). Web beacons are electronic images that may be used in our Services or emails to help deliver cookies, count visits, understand usage, and campaign effectiveness and determine whether an email has been opened and acted upon. If your browser is set not to accept cookies, you may not be able to use the website or Services.</p></li>
