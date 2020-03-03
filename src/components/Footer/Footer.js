@@ -80,10 +80,11 @@ const Footer = props => {
               </div>
             </div>
 
-			  <div className={css.extraLinks}>
+            <div className={css.extraLinks}>
 
               <div className={css.legalMatters}>
                 <div className={css.tosAndPrivacy}>
+
                   
 				  <div><NamedLink name="ContactUs" className={css.legalLink}>
                     <FormattedMessage id="Footer.toContactPage" />
@@ -101,14 +102,15 @@ const Footer = props => {
                
                
                </div>
+
             </div>
-          </div>
-			
-	
+
+
             <div className={css.extraLinks}>
 
               <div className={css.legalMatters}>
                 <div className={css.tosAndPrivacy}>
+
                   
 				    <div><NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
                       <FormattedMessage id="Footer.privacyPolicy" />
@@ -154,12 +156,12 @@ const Footer = props => {
                     <FormattedMessage id="Cancellations" />
                   </NamedLink></div> 
 
+
             </div>
           </div>
         </div>
       </div>
     </div>
-	</div>
   );
 };
 
