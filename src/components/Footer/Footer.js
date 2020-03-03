@@ -85,14 +85,14 @@ const Footer = props => {
               <div className={css.legalMatters}>
                 <div className={css.tosAndPrivacy}>
                   
-				  <p><NamedLink name="ContactUs" className={css.legalLink}>
+				  <div><NamedLink name="ContactUs" className={css.legalLink}>
                     <FormattedMessage id="Footer.toContactPage" />
-                  </NamedLink></p>
+                  </NamedLink></div>
 				  
 				  
-				   <p><NamedLink name="AboutPage" className={css.legalLink}>
+				   <div><NamedLink name="AboutPage" className={css.legalLink}>
                     <FormattedMessage id="Footer.toAboutPage" />
-                  </NamedLink></p>
+                  </NamedLink></div>
 				  
                 
                   
@@ -110,25 +110,25 @@ const Footer = props => {
               <div className={css.legalMatters}>
                 <div className={css.tosAndPrivacy}>
                   
-				    <p><NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
+				    <div><NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
                       <FormattedMessage id="Footer.privacyPolicy" />
-                    </NamedLink></p>
+                    </NamedLink></div>
 				  
-				     <p><NamedLink name="TermsOfServicePage" className={css.legalLink}>
+				     <div><NamedLink name="TermsOfServicePage" className={css.legalLink}>
                       <FormattedMessage id="Footer.termsOfUse" />
-                    </NamedLink></p>
+                    </NamedLink></div>
 					
-					<p><NamedLink name="CommunityGuidePage" className={css.legalLink}>
+					<div><NamedLink name="CommunityGuidePage" className={css.legalLink}>
                     <FormattedMessage id="Footer.CommunityGuide" />
-                  </NamedLink></p>
+                  </NamedLink></div>
 				  
-				 	<p><NamedLink name="FeesExplained" className={css.legalLink}>
+				 	<div><NamedLink name="FeesExplained" className={css.legalLink}>
                     <FormattedMessage id="Fees Explained" />
-                  </NamedLink></p> 
+                  </NamedLink></div> 
                 
-                    <p><NamedLink name="CancellationPolicy" className={css.legalLink}>
-                    <FormattedMessage id="Cancellation Policy" />
-                  </NamedLink></p>             
+                    <div><NamedLink name="CancellationPolicy" className={css.legalLink}>
+                    <FormattedMessage id="Cancellations" />
+                  </NamedLink></div>             
                
                </div>
             </div>
@@ -141,9 +141,19 @@ const Footer = props => {
               <NamedLink name="PrivacyPolicyPage" className={css.privacy}>
                 <FormattedMessage id="Footer.privacy" />
               </NamedLink>
-              <NamedLink name="TermsOfServicePage" className={css.terms}>
+              <NamedLink name="TermsOfServicePage" className={css.termsMobile}>
                 <FormattedMessage id="Footer.terms" />
               </NamedLink>
+              <div><NamedLink name="CommunityGuidePage" className={css.legalLinkMobile}>
+                    <FormattedMessage id="Footer.CommunityGuide" />
+                  </NamedLink></div>
+                  <div><NamedLink name="FeesExplained" className={css.legalLinkMobile}>
+                    <FormattedMessage id="Fees Explained" />
+                  </NamedLink></div> 
+                   <div><NamedLink name="CancellationPolicy" className={css.legalLinkMobile}>
+                    <FormattedMessage id="Cancellations" />
+                  </NamedLink></div> 
+
             </div>
           </div>
         </div>

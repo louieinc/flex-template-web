@@ -43,7 +43,7 @@ const LazyImage = lazyLoadWithDimensions(ListingImage, { loadAfterInitialRenderi
 
 export const ListingCardComponent = props => {  
   const { className, rootClassName, intl, listing, renderSizes, setActiveListing } = props;
-  console.log(listing);
+  
   
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureListing(listing);

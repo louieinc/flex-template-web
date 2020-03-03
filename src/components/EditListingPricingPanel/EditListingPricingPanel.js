@@ -28,7 +28,12 @@ const EditListingPricingPanel = props => {
 
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureOwnListing(listing);
+  
   const { price } = currentListing.attributes;
+  
+  const weekPrice = currentListing.attributes.publicData.weekPrice;
+  const monthPrice = currentListing.attributes.publicData.monthPrice;
+  
   
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
@@ -45,7 +50,7 @@ const EditListingPricingPanel = props => {
   const form = priceCurrencyValid ? (
     <EditListingPricingForm
       className={css.form}
-      initialValues={{ price }}
+      initialValues={{ price, weekPrice, monthPrice }}
       onSubmit={onSubmit}
       onChange={onChange}
       saveActionMsg={submitButtonText}

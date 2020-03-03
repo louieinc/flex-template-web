@@ -52,6 +52,10 @@
 .heroContent {
   margin: 0 24px 0 24px;
 
+  @media (--viewportSmall) {
+    margin: 0 10px 0 10px;
+  }
+
   @media (--viewportMedium) {
     margin: 0 7.5vw 0 7.5vw;
   }
@@ -77,9 +81,13 @@
   @apply --SectionHero_animation;
   animation-delay: 0.5s;
 
+  @media (--viewportSmall) {
+    max-width: 360px ;
+  }
   @media (--viewportMedium) {
     max-width: var(--SectionHero_desktopTitleMaxWidth);
   }
+  
 }
 
 .heroSubTitle {
