@@ -286,3 +286,5 @@ Footer.propTypes = {
   className: string,
   intl: intlShape.isRequired
 };
+
+export default injectIntl(Footer);
