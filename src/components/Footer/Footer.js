@@ -85,20 +85,24 @@ const Footer = props => {
               <div className={css.legalMatters}>
                 <div className={css.tosAndPrivacy}>
 
-                  <p><NamedLink name="ContactUs" className={css.legalLink}>
+                  
+				  <div><NamedLink name="ContactUs" className={css.legalLink}>
                     <FormattedMessage id="Footer.toContactPage" />
-                  </NamedLink></p>
-
-                  <p><NamedLink name="AboutPage" className={css.legalLink}>
+                  </NamedLink></div>
+				  
+				  
+				   <div><NamedLink name="AboutPage" className={css.legalLink}>
                     <FormattedMessage id="Footer.toAboutPage" />
-                  </NamedLink></p>
+                  </NamedLink></div>
+				  
+                
+                  
+                  
+                    
+               
+               
+               </div>
 
-                  <p><NamedLink name="FAQPage" className={css.legalLink}>
-                    <FormattedMessage id="Footer.toFAQPage" />
-                  </NamedLink></p>
-
-                </div>
-              </div>
             </div>
 
 
@@ -107,41 +111,52 @@ const Footer = props => {
               <div className={css.legalMatters}>
                 <div className={css.tosAndPrivacy}>
 
-                  <p><NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
-                    <FormattedMessage id="Footer.privacyPolicy" />
-                  </NamedLink></p>
-
-                  <p><NamedLink name="TermsOfServicePage" className={css.legalLink}>
-                    <FormattedMessage id="Footer.termsOfUse" />
-                  </NamedLink></p>
-
-                  <p><NamedLink name="CommunityGuidePage" className={css.legalLink}>
+                  
+				    <div><NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
+                      <FormattedMessage id="Footer.privacyPolicy" />
+                    </NamedLink></div>
+				  
+				     <div><NamedLink name="TermsOfServicePage" className={css.legalLink}>
+                      <FormattedMessage id="Footer.termsOfUse" />
+                    </NamedLink></div>
+					
+					<div><NamedLink name="CommunityGuidePage" className={css.legalLink}>
                     <FormattedMessage id="Footer.CommunityGuide" />
-                  </NamedLink></p>
-
-                  <p><NamedLink name="FeesExplained" className={css.legalLink}>
+                  </NamedLink></div>
+				  
+				 	<div><NamedLink name="FeesExplained" className={css.legalLink}>
                     <FormattedMessage id="Fees Explained" />
-                  </NamedLink></p>
-
-                  <p><NamedLink name="CancellationPolicy" className={css.legalLink}>
-                    <FormattedMessage id="Cancellation Policy" />
-                  </NamedLink></p>
-
-                </div>
-              </div>
+                  </NamedLink></div> 
+                
+                    <div><NamedLink name="CancellationPolicy" className={css.legalLink}>
+                    <FormattedMessage id="Cancellations" />
+                  </NamedLink></div>             
+               
+               </div>
             </div>
-            <div className={css.copyrightAndTermsMobile}>
-              <NamedLink name="LandingPage" className={css.organizationCopyrightMobile}>
-                <FormattedMessage id="Footer.copyright" />
+          </div>
+          <div className={css.copyrightAndTermsMobile}>
+            <NamedLink name="LandingPage" className={css.organizationCopyrightMobile}>
+              <FormattedMessage id="Footer.copyright" />
+            </NamedLink>
+            <div className={css.tosAndPrivacyMobile}>
+              <NamedLink name="PrivacyPolicyPage" className={css.privacy}>
+                <FormattedMessage id="Footer.privacy" />
               </NamedLink>
-              <div className={css.tosAndPrivacyMobile}>
-                <NamedLink name="PrivacyPolicyPage" className={css.privacy}>
-                  <FormattedMessage id="Footer.privacy" />
-                </NamedLink>
-                <NamedLink name="TermsOfServicePage" className={css.terms}>
-                  <FormattedMessage id="Footer.terms" />
-                </NamedLink>
-              </div>
+              <NamedLink name="TermsOfServicePage" className={css.termsMobile}>
+                <FormattedMessage id="Footer.terms" />
+              </NamedLink>
+              <div><NamedLink name="CommunityGuidePage" className={css.legalLinkMobile}>
+                    <FormattedMessage id="Footer.CommunityGuide" />
+                  </NamedLink></div>
+                  <div><NamedLink name="FeesExplained" className={css.legalLinkMobile}>
+                    <FormattedMessage id="Fees Explained" />
+                  </NamedLink></div> 
+                   <div><NamedLink name="CancellationPolicy" className={css.legalLinkMobile}>
+                    <FormattedMessage id="Cancellations" />
+                  </NamedLink></div> 
+
+
             </div>
           </div>
         </div>

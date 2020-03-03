@@ -94,7 +94,7 @@ class AirportSearchComponent extends Component {
       address: search,
       bounds,
     };console.log(this.props);console.log(history);
-    
+  console.log(searchParams);
     history.push(createResourceLocatorString('SearchPage', routeConfiguration(), {}, searchParams));
   }
 

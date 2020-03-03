@@ -6,7 +6,7 @@
   border-top-color: var(--matterColorNegative);
 
   width: 100%;
-  padding: 24px 24px 42px 24px;
+  padding: 60px 24px 42px 24px;
   background-color: var(--matterColorBright);
 
   @media (--viewportMedium) {
@@ -257,7 +257,10 @@
 
 .legalLink,
 .privacy,
-.terms {
+.terms,
+.legalLinkMobile,
+.privacyMobile,
+.termsMobile {
   /* Font */
   @apply --marketplaceTinyFontStyles;
   color: var(--matterColorAnti);
@@ -324,5 +327,12 @@
 }
 
 .privacy {
+  margin-right: 24px;
+}
+
+.legalLinkMobile,
+.privacyMobile,
+.termsMobile,
+ {
   margin-right: 24px;
 }

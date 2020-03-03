@@ -96,7 +96,7 @@ const LocationPredictionsList = props => {
   /* eslint-enable jsx-a11y/no-static-element-interactions */
 
   const classes = classNames(rootClassName || css.predictionsRoot, className);
-console.log(predictions.map(item));
+
   return (
     <div className={classes}>
       <ul className={css.predictions}>{predictions.map(item)}</ul>
@@ -356,7 +356,7 @@ class LocationAutocompleteInputImplAirport extends Component {
 
     var results = this.getGeocoder().getPlacePredictions(search);
 
-      console.log(results);
+      
         const { search: currentSearch } = currentValue(this.props);
         this.setState({ fetchingPredictions: false });
 

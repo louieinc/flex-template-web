@@ -99,22 +99,22 @@ export const EditListingPricingFormComponent = props => (
             validate={priceValidators}
           />
           <FieldCurrencyInput
-            id="week"
-            name="publicData.weekPrice"
+            id="weekPrice"
+            name="weekPrice"
             className={css.priceInput}            
             label="Price per week in USD (optional)"
             placeholder="Choose your weekly price"
             currencyConfig={config.currencyConfig}
-            //validate={priceValidators}
+            validate={priceValidators}
           />
           <FieldCurrencyInput
-            id="month"
-            name="publicData.monthPrice"
+            id="monthPrice"
+            name="monthPrice"
             className={css.priceInput}            
             label="Price per month in USD (optional)"
             placeholder="Choose your monthly price"
             currencyConfig={config.currencyConfig}
-            //validate={priceValidators}
+            validate={priceValidators}
           />
           <Button
             className={css.submitButton}

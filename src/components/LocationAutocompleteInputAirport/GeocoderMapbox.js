@@ -25,7 +25,7 @@ const locationBounds = (latlng, distance) => {
   if (!latlng) {
     return null;
   }
-console.log(latlng); console.log(distance);
+
   const bounds = new window.mapboxgl.LngLat(latlng.lng, latlng.lat).toBounds(42000);
   return new SDKLatLngBounds(
     new SDKLatLng(bounds.getNorth(), bounds.getEast()),
@@ -33,7 +33,7 @@ console.log(latlng); console.log(distance);
   );
 };
 
-const placeOrigin = prediction => { console.log(Array.isArray(prediction.center));
+const placeOrigin = prediction => { 
   if (prediction && Array.isArray(prediction.center) && prediction.center.length === 2) {
     // Coordinates in Mapbox features are represented as [longitude, latitude].
     return new SDKLatLng(prediction.center[1], prediction.center[0]);
@@ -202,7 +202,7 @@ class GeocoderMapbox {
 
 
       ];
-console.log(airports[1].code.toUpperCase().match(search.toUpperCase() , "w"));
+
       var results = [];
       for(var i=0;i<airports.length;i++){
         if(airports[i].place_name.toUpperCase().match(search.toUpperCase(), "w") != null ||

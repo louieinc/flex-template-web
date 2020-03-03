@@ -53,13 +53,16 @@ class CurrencyInputComponent extends Component {
   constructor(props) {
     super(props);
     const { currencyConfig, defaultValue, input, intl } = props;
+    input.value = input.value instanceof Money ? input.value : getPrice(input.value, currencyConfig);
     const initialValueIsMoney = input.value instanceof Money;
+   
 
     if (initialValueIsMoney && input.value.currency !== currencyConfig.currency) {
       const e = new Error('Value currency different from marketplace currency');
       log.error(e, 'currency-input-invalid-currency', { currencyConfig, inputValue: input.value });
       throw e;
     }
+
 
     const initialValue = initialValueIsMoney ? convertMoneyToNumber(input.value) : defaultValue;
     const hasInitialValue = typeof initialValue === 'number' && !isNaN(initialValue);
