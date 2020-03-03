@@ -112,11 +112,11 @@ const Footer = props => {
             </div>
 
 
->>>>>>> c91fa6204e0e0c93c885101db13b450b250e7bdf
+
             <div className={css.extraLinks}>
               <div className={css.legalMatters}>
                 <div className={css.tosAndPrivacy}>
-<<<<<<< HEAD
+
                   <div>
                     <NamedLink name="ContactUs" className={css.legalLink}>
                       <FormattedMessage id="Footer.toContactPage" />
@@ -221,7 +221,7 @@ const Footer = props => {
                   </div>
                 </div>
               </div>
-=======
+
 
                   
 				    <div><NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
@@ -269,7 +269,7 @@ const Footer = props => {
                   </NamedLink></div> 
 
 
->>>>>>> c91fa6204e0e0c93c885101db13b450b250e7bdf
+
             </div>
           </div>
         </div>
