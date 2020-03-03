@@ -84,8 +84,7 @@ const Footer = props => {
               </div>
             </div>
 
-<<<<<<< HEAD
-=======
+
             <div className={css.extraLinks}>
 
               <div className={css.legalMatters}>
