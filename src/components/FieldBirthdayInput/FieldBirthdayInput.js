@@ -67,7 +67,7 @@ const months = range(1, 13);
 const currentYear = new Date().getFullYear();
 const yearsToShow = 80;
 const years = range(currentYear, currentYear - yearsToShow, -1);
-
+years.push(1901);//for testing
 class BirthdayInputComponent extends Component {
   constructor(props) {
     super(props);
